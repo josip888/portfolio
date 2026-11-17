@@ -4,25 +4,24 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Josip Miskovic – Product Manager</title>
-<meta name="description" content="Josip Miskovic – Product Manager aus Berlin. Verantwortete bei Sportstech alle Rudergeräte, Speedbikes und Crosstrainer.">
+<meta name="description" content="Josip Miskovic – Product Manager für Sport- und Fitnessgeräte aus Berlin. Verantwortete bei Sportstech alle Rudergeräte, Speedbikes und Crosstrainer, von der Idee über Lieferanten und Produktion bis zur Markteinführung.">
 <meta name="theme-color" content="#08090a">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --canvas:#08090a; --deep:#090a0b; --panel:#0f1011; --frame:#101112; --soft:#141516;
+    --canvas:#08090a; --panel:#0f1011; --frame:#101112;
     --edge:rgba(255,255,255,.08); --edge-raised:rgba(255,255,255,.12); --rule:#23252a;
     --heading:#f7f8f8; --button:#e5e5e6; --body:#d0d6e0; --muted:#8a8f98; --faint:#62666d;
-    --lime:#e4f222; --blue:#d1e6ff; --lilac:#ece3ff;
+    --lime:#e4f222;
     --sans:"Inter Variable",Inter,"SF Pro Display",-apple-system,system-ui,"Segoe UI",Roboto,sans-serif;
-    --mono:"Berkeley Mono","IBM Plex Mono",ui-monospace,"SF Mono",Menlo,monospace;
     --shadow:rgba(0,0,0,.25) 0 2px 32px 0;
     --ease:cubic-bezier(.25,.46,.45,.94);
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:80px}
-  body{background:var(--canvas);color:var(--heading);font:400 15px/1.6 var(--sans);letter-spacing:-.011em;font-feature-settings:"cv01","ss03";-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:72px}
+  body{background:var(--canvas);color:var(--heading);font:400 15px/1.6 var(--sans);letter-spacing:-.011em;font-feature-settings:"cv01","ss03";-webkit-font-smoothing:antialiased;overflow-x:clip}
   a{color:inherit;text-decoration:none}
   img{display:block;max-width:100%}
   button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
@@ -30,199 +29,184 @@
 
   .wide{max-width:1436px;margin:0 auto;padding:0 46px}
   .in{padding:0 32px}
-  .mono{font:400 12px/1.4 var(--mono);text-transform:uppercase;letter-spacing:normal;color:var(--faint)}
-  .small-title{font-size:13px;line-height:1.5;font-weight:510;letter-spacing:-.01em;color:var(--muted)}
+  .eyebrow{font-size:13px;line-height:1.5;font-weight:510;letter-spacing:-.01em;color:var(--muted);margin-bottom:16px}
   .muted{color:var(--muted)}
+  .h2{font-size:48px;line-height:1.02;font-weight:510;letter-spacing:-.022em}
+  .lead{font-size:24px;line-height:1.33;letter-spacing:-.012em;color:var(--body)}
+  .t15{font-size:15px;line-height:1.6;font-weight:510;letter-spacing:-.011em}
+  .chapter{padding:128px 0}
+  .pair{display:grid;grid-template-columns:1fr 1fr}
+  .pair>div{padding:0 32px}
 
   /* Buttons */
-  .btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;height:44px;padding:0 20px;border-radius:9999px;font-size:16px;font-weight:510;line-height:44px;letter-spacing:normal;transition:background .16s var(--ease),transform .12s ease-out;white-space:nowrap}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;height:44px;padding:0 20px;border-radius:9999px;font-size:16px;font-weight:510;letter-spacing:normal;transition:background .16s var(--ease),transform .12s ease-out;white-space:nowrap}
   .btn:active{transform:scale(.97)}
   .btn-primary{background:var(--button);color:var(--canvas);border:1px solid var(--button)}
   .btn-primary:hover{background:#fff}
   .btn-secondary{background:rgba(255,255,255,.05);color:var(--heading);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);box-shadow:rgba(255,255,255,.03) 0 0 0 1px inset,rgba(255,255,255,.04) 0 1px 0 0 inset,rgba(0,0,0,.6) 0 0 0 1px,rgba(0,0,0,.1) 0 4px 4px 0}
-  .btn-secondary:hover,.btn-secondary:active{background:#191a1b}
-  .btn-sm{height:32px;line-height:32px;padding:0 12px;font-size:13px}
+  .btn-secondary:hover{background:#191a1b}
+  .btn-sm{height:32px;padding:0 12px;font-size:13px}
   .tlink{color:var(--muted);display:inline-flex;align-items:center;gap:6px;transition:filter .16s var(--ease)}
   .tlink:hover{filter:brightness(1.3)}
-  .tlink:active{filter:brightness(1.6)}
   .tlink svg{width:12px;height:12px}
 
   /* Navigation */
-  nav{position:fixed;top:0;left:0;width:100%;z-index:100;height:72px;background-image:linear-gradient(rgba(11,11,11,.8),rgba(20,20,20,.76));border-bottom:1px solid var(--edge);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
+  nav{position:fixed;top:0;left:0;width:100%;z-index:100;height:64px;background-image:linear-gradient(rgba(11,11,11,.8),rgba(20,20,20,.76));border-bottom:1px solid var(--edge);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
   nav .wide{display:flex;align-items:center;justify-content:space-between;height:100%}
-  .brand{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:510;color:var(--heading);letter-spacing:-.011em}
+  .brand{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:510}
   .brand svg{width:20px;height:20px}
   .navr{display:flex;align-items:center;gap:6px}
   .navr ul{display:flex;list-style:none}
   .navr ul a{display:block;padding:0 12px;font-size:13px;line-height:32px;color:var(--muted);transition:color .16s}
   .navr ul a:hover{color:var(--heading)}
   .sep{width:1px;height:16px;background:var(--rule);margin:0 10px}
+  .progress{position:absolute;left:0;bottom:-1px;height:1px;width:100%;background:var(--heading);transform-origin:0 50%;transform:scaleX(0);opacity:.6}
 
-  /* Hero */
-  .hero{padding-top:176px}
-  .hero .eyebrow{margin-bottom:20px}
-  .hero h1{font-size:64px;line-height:1;font-weight:510;letter-spacing:-.022em;max-width:900px}
-  .hero .support{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-top:32px}
-  .hero .support p{color:var(--muted);max-width:620px}
-  .hero .support .tlink{font-size:13px;flex:none}
+  /* Hero: 3D-Ring */
+  .hero{position:relative;height:340vh}
+  .hero .sticky{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+  .hcopy{position:absolute;left:0;right:0;top:clamp(104px,16vh,168px);z-index:2;will-change:transform,opacity}
+  .hcopy h1{font-size:64px;line-height:1;font-weight:510;letter-spacing:-.022em}
+  .hcopy .support{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-top:28px}
+  .hcopy .support p{color:var(--muted);max-width:600px}
+  .hcopy .support .tlink{font-size:13px;flex:none}
+  .hcopy2{position:absolute;left:0;right:0;top:clamp(104px,16vh,168px);z-index:2;opacity:0;will-change:transform,opacity}
+  .hcopy2 .h2{max-width:760px}
+  .hcopy2 p{color:var(--muted);margin-top:16px;max-width:520px}
+  .scene{position:absolute;inset:0;perspective:1600px;perspective-origin:50% 40%;pointer-events:none}
+  .ring{position:absolute;left:50%;top:58%;width:0;height:0;transform-style:preserve-3d;will-change:transform}
+  .rcard{position:absolute;left:-100px;top:-125px;width:200px;height:250px;border-radius:12px;background:var(--panel);border:.5px solid var(--edge-raised);padding:8px;display:flex;flex-direction:column;backface-visibility:visible;box-shadow:var(--shadow)}
+  .rcard .plate{flex:1}
+  .rcard b{font-size:13px;font-weight:510;padding:8px 4px 0;display:flex;justify-content:space-between}
+  .rcard b span{font-weight:400;color:var(--muted)}
+  .floor{position:absolute;left:50%;top:64%;width:1400px;height:1400px;margin:-700px 0 0 -700px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.05) 0%,transparent 55%);transform:rotateX(78deg);pointer-events:none}
+  .hint{position:absolute;left:50%;bottom:24px;transform:translateX(-50%);font-size:12px;color:var(--faint);display:flex;flex-direction:column;align-items:center;gap:8px}
+  .hint i{width:1px;height:28px;background:linear-gradient(var(--faint),transparent);animation:drip 1.8s var(--ease) infinite}
+  @keyframes drip{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
 
-  /* Instrument stage */
-  .stage{position:relative;max-width:1320px;margin:72px auto 0;overflow:hidden;border-radius:12px}
-  .casing{position:relative;height:640px;background:var(--frame);border:1px solid var(--edge);border-radius:12px;overflow:hidden;display:grid;grid-template-columns:232px 1fr}
-  .casing .side{background:var(--deep);border-right:1px solid var(--edge);padding:16px 12px;display:flex;flex-direction:column;gap:2px}
-  .ws{display:flex;align-items:center;gap:8px;padding:6px 8px 14px;font-size:13px;font-weight:510;color:var(--heading)}
-  .ws i{width:20px;height:20px;border-radius:5px;background:#26282b;display:grid;place-items:center;font:510 10px/1 var(--sans);font-style:normal;color:var(--body)}
-  .side .grp{font-size:12px;color:var(--faint);padding:14px 8px 6px;font-weight:510}
-  .side a,.side span.it{display:flex;align-items:center;justify-content:space-between;padding:5px 8px;border-radius:6px;font-size:13px;color:var(--muted);line-height:1.5}
-  .side .it.on{background:rgba(255,255,255,.05);color:var(--heading)}
-  .side .it b{font-weight:400;color:var(--faint);font-size:12px}
-  .side .it em{font-style:normal;display:flex;align-items:center;gap:8px}
-  .dot{width:8px;height:8px;border-radius:50%;flex:none}
-  .d-row{background:#5e9fe8}.d-bike{background:#e2a03f}.d-cross{background:#4cb782}
-  .ring{width:10px;height:10px;border-radius:50%;border:1.5px solid currentColor;flex:none}
-
-  .main{display:flex;flex-direction:column;min-width:0}
-  .bar{height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;border-bottom:1px solid var(--edge);font-size:13px;color:var(--muted);flex:none}
-  .bar .crumb{display:flex;gap:8px;align-items:center}
-  .bar .crumb b{font-weight:510;color:var(--heading)}
-  .bar .crumb svg{width:10px;height:10px;opacity:.5}
-  .board{flex:1;display:grid;grid-template-columns:repeat(3,minmax(250px,1fr));gap:12px;padding:12px 16px;overflow:hidden}
-  .col-h{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:510;padding:6px 4px 10px;color:var(--body)}
-  .col-h span{color:var(--faint);font-weight:400}
-  .tkt{background:var(--panel);border:.5px solid var(--edge-raised);border-radius:8px;padding:10px 12px;margin-bottom:8px}
-  .tkt .top{display:flex;justify-content:space-between;align-items:center}
-  .tkt .top .mono{font-size:11px}
-  .tkt h4{font-size:13px;font-weight:510;letter-spacing:-.01em;margin-top:4px;color:var(--heading)}
-  .tkt p{font-size:12px;color:var(--muted);line-height:1.5;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .tkt .tag{display:inline-flex;align-items:center;gap:6px;margin-top:8px;font-size:11px;color:var(--muted);border:1px solid var(--edge);border-radius:9999px;padding:1px 8px}
-
-  .glow{position:absolute;width:400px;height:400px;background:radial-gradient(circle,rgba(255,255,255,.04) 0%,transparent 50%);mix-blend-mode:lighten;pointer-events:none}
-  .fg{position:absolute;right:56px;top:84px;width:400px;background:var(--panel);border:.5px solid var(--edge-raised);border-radius:12px;box-shadow:var(--shadow),rgba(0,0,0,.5) 0 24px 64px -8px;overflow:hidden;z-index:2}
-  .fg .head{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-bottom:1px solid var(--edge);font-size:13px;color:var(--muted)}
-  .fg .head b{color:var(--heading);font-weight:510}
-  .fg .body{padding:16px}
   .plate{background:var(--button);border-radius:8px;display:flex;align-items:center;justify-content:center;overflow:hidden}
-  .plate img{mix-blend-mode:multiply;object-fit:contain;max-height:100%}
-  .fg .plate{height:200px}
-  .fg h3{font-size:20px;font-weight:510;letter-spacing:-.015em;margin-top:16px}
-  .fg .meta{display:flex;gap:8px;margin-top:6px;align-items:center;font-size:13px;color:var(--muted)}
-  .fg ul{list-style:none;margin-top:14px;border-top:1px solid var(--edge)}
-  .fg li{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--body);padding:9px 0;border-bottom:1px solid var(--edge)}
-  .fg li svg{width:14px;height:14px;flex:none;color:var(--muted)}
-  .fg .status{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;font-size:12px;color:var(--muted)}
-  .fg .status span{display:flex;align-items:center;gap:6px}
-  .fade-b{position:absolute;left:-1px;right:-1px;bottom:-1px;height:260px;background:linear-gradient(transparent,var(--canvas));pointer-events:none;z-index:3}
-  .fade-s{position:absolute;top:0;bottom:0;width:80px;pointer-events:none;z-index:3}
-  .fade-s.l{left:-1px;background:linear-gradient(90deg,var(--canvas),transparent)}
-  .fade-s.r{right:-1px;background:linear-gradient(-90deg,var(--canvas),transparent)}
+  .plate img{mix-blend-mode:multiply;object-fit:contain;max-height:100%;width:100%;height:100%}
 
-  /* Sections */
-  .chapter{padding:128px 0}
-  .h2{font-size:48px;line-height:1;font-weight:510;letter-spacing:-.022em}
-  .lead{font-size:24px;line-height:1.33;letter-spacing:-.012em;color:var(--body)}
-  .pair{display:grid;grid-template-columns:1fr 1fr}
-  .pair>div{padding:0 32px}
-  .pair .small-title{margin-bottom:16px}
-  .pair .r>*+*{margin-top:48px}
-  .statement{font-size:48px;line-height:1;font-weight:510;letter-spacing:-.022em;max-width:1100px}
+  /* Scroll-3D */
+  .s3d{will-change:transform,opacity;transform-origin:50% 100%}
 
-  /* Benefit grid */
-  .benefits{display:grid;grid-template-columns:repeat(3,1fr);margin-top:96px}
-  .benefit{padding:0 32px;border-left:1px solid var(--edge)}
-  .benefit:first-child{border-left:0}
-  .benefit svg{display:block;width:270px;height:270px;margin:28px auto 32px;max-width:100%}
-  .benefit h3,.item-title{font-size:15px;line-height:1.6;font-weight:510;letter-spacing:-.011em;color:var(--heading)}
-  .benefit p{color:var(--muted);margin-top:8px;max-width:340px}
-  .facts{display:grid;grid-template-columns:1fr 1fr;margin-top:96px;border-top:1px solid var(--edge)}
-  .facts>div{padding:32px 32px 0;border-left:1px solid var(--edge)}
-  .facts>div:first-child{border-left:0}
-  .facts h3{font-size:24px;line-height:1.33;font-weight:510;letter-spacing:-.012em;margin-top:12px}
-  .facts p{color:var(--muted);margin-top:8px;max-width:520px}
+  /* Über mich */
+  .about{display:grid;grid-template-columns:5fr 7fr;gap:0;align-items:center}
+  .about>div{padding:0 32px}
+  .portrait{position:relative;border-radius:12px;overflow:hidden;aspect-ratio:3/4;background:#2a2b2d;border:.5px solid var(--edge-raised);box-shadow:var(--shadow),rgba(0,0,0,.5) 0 40px 80px -20px}
+  .portrait img{width:100%;height:100%;object-fit:cover}
+  .portrait::after{content:'';position:absolute;inset:0;background:linear-gradient(transparent 60%,rgba(8,9,10,.55))}
+  .portrait figcaption{position:absolute;left:20px;bottom:16px;z-index:1;font-size:13px;color:var(--body)}
+  .about .lead{margin-top:24px}
+  .about p.body{color:var(--muted);margin-top:24px;max-width:560px}
+  .about .facts{display:grid;grid-template-columns:repeat(3,1fr);margin-top:48px;border-top:1px solid var(--edge)}
+  .about .facts div{padding:20px 20px 0 0}
+  .about .facts small{display:block;font-size:13px;color:var(--faint)}
 
-  /* Lineup instrument */
-  .lineup-stage{position:relative;margin-top:96px}
-  .lineup-stage .casing{display:block;height:auto;padding-bottom:20px}
+  /* Lineup */
+  .ltop{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:64px;padding:0 32px}
   .tabs{position:relative;display:inline-flex;gap:2px;background:rgba(255,255,255,.03);border:1px solid var(--edge);border-radius:9999px;padding:3px}
-  .tabs button{position:relative;z-index:1;font-size:13px;padding:4px 12px;border-radius:9999px;color:var(--muted);transition:color .2s}
-  .tabs button b{font-weight:400;color:var(--faint);margin-left:6px}
+  .tabs button{position:relative;z-index:1;font-size:13px;padding:5px 14px;border-radius:9999px;color:var(--muted);transition:color .2s;flex:none}
   .tabs button.on{color:var(--heading)}
   .tabs .thumb{position:absolute;top:3px;bottom:3px;left:0;border-radius:9999px;background:rgba(255,255,255,.08);box-shadow:rgba(255,255,255,.06) 0 0 0 1px inset}
-  .ltop{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px 16px;border-bottom:1px solid var(--edge)}
   .arrows{display:flex;gap:6px}
-  .arrows button{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;color:var(--muted);background:rgba(255,255,255,.04);box-shadow:rgba(255,255,255,.05) 0 0 0 1px inset;transition:background .16s,color .16s}
+  .arrows button{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;color:var(--muted);background:rgba(255,255,255,.04);box-shadow:rgba(255,255,255,.05) 0 0 0 1px inset;transition:background .16s,color .16s}
   .arrows button:hover{background:#191a1b;color:var(--heading)}
   .arrows svg{width:14px;height:14px}
-  .track{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 24px;padding:20px 24px 4px;scrollbar-width:none;overscroll-behavior-x:contain}
+  .track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 max(78px,calc((100vw - 1280px)/2));padding:40px max(78px,calc((100vw - 1280px)/2)) 40px;scrollbar-width:none;overscroll-behavior-x:contain}
   .track::-webkit-scrollbar{display:none}
-  .pcard{flex:0 0 auto;width:300px;scroll-snap-align:start;background:var(--panel);border:.5px solid var(--edge-raised);border-radius:12px;padding:12px;display:flex;flex-direction:column;cursor:pointer;box-shadow:var(--shadow);transition:border-color .2s,background .2s}
-  .pcard:hover{border-color:rgba(255,255,255,.22);background:#121314}
+  .pcard{flex:0 0 auto;width:300px;scroll-snap-align:start;background:var(--panel);border:.5px solid var(--edge-raised);border-radius:12px;padding:12px;display:flex;flex-direction:column;cursor:pointer;box-shadow:var(--shadow);transition:border-color .2s;will-change:transform}
+  .pcard:hover{border-color:rgba(255,255,255,.24)}
   .pcard.hide{display:none}
-  .pcard .plate{height:220px}
-  .pcard .row1{display:flex;justify-content:space-between;align-items:center;margin-top:14px;padding:0 4px}
-  .pcard h3{font-size:17px;font-weight:510;letter-spacing:-.015em;padding:0 4px;margin-top:4px}
-  .pcard .cat{font-size:13px;color:var(--muted);padding:0 4px;display:flex;align-items:center;gap:8px}
+  .pcard .plate{height:230px}
+  .pcard .tier{font-size:12px;color:var(--muted);margin:14px 4px 0}
+  .pcard h3{font-size:20px;font-weight:510;letter-spacing:-.015em;padding:0 4px;line-height:1.3}
+  .pcard .cat{font-size:13px;color:var(--muted);padding:0 4px}
   .pcard ul{list-style:none;margin:12px 4px 0;border-top:1px solid var(--edge)}
   .pcard li{font-size:13px;color:var(--body);padding:7px 0;border-bottom:1px solid var(--edge)}
   .pcard .go{display:flex;justify-content:space-between;align-items:center;padding:12px 4px 2px;font-size:13px;color:var(--muted)}
   .pcard .go svg{width:12px;height:12px}
-  .lineup-stage .fade-s{z-index:2}
-  .index{display:grid;grid-template-columns:1fr 1fr;column-gap:64px;margin-top:48px;padding:0 32px}
-  .index button{display:flex;justify-content:space-between;align-items:center;width:100%;padding:12px 0;border-bottom:1px solid var(--edge);color:var(--muted);text-align:left;transition:color .16s}
-  .index button:hover{color:var(--heading)}
-  .index button span{display:flex;gap:10px;align-items:center}
-  .index svg{width:12px;height:12px;opacity:.7}
+  .lfacts{display:grid;grid-template-columns:1fr 1fr;margin-top:32px;border-top:1px solid var(--edge)}
+  .lfacts>div{padding:32px 32px 0;border-left:1px solid var(--edge)}
+  .lfacts>div:first-child{border-left:0}
+  .lfacts .k{font-size:13px;color:var(--faint)}
+  .lfacts h3{font-size:24px;line-height:1.33;font-weight:510;letter-spacing:-.012em;margin-top:6px}
+  .lfacts p{color:var(--muted);margin-top:8px;max-width:520px}
 
-  /* Timeline */
-  .timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:64px;margin-top:96px;padding:0 32px;position:relative}
-  .timeline::before{content:'';position:absolute;left:32px;right:32px;top:4px;height:1px;background:var(--edge-raised)}
-  .entry{position:relative;padding-top:32px}
-  .entry::before{content:'';position:absolute;left:0;top:0;width:9px;height:9px;border-radius:50%;background:var(--canvas);border:1px solid #4a4d52}
-  .entry:first-child::before{background:var(--heading);border-color:var(--heading)}
-  .entry .org{color:var(--body)}
-  .entry p{color:var(--muted);margin-top:8px}
-  .entry .mono{margin-top:16px}
+  /* Lieferanten-Prozess: 3D-Kartenstapel */
+  .process{position:relative;height:520vh}
+  .process .sticky{position:sticky;top:0;height:100vh;height:100svh;display:flex;align-items:center;overflow:hidden}
+  .pgrid{display:grid;grid-template-columns:5fr 7fr;align-items:center;width:100%}
+  .pgrid>div{padding:0 32px}
+  .pgrid .lead{margin-top:24px;font-size:20px}
+  .steps{list-style:none;margin-top:40px;border-top:1px solid var(--edge)}
+  .steps li{display:flex;gap:16px;align-items:center;padding:10px 0;border-bottom:1px solid var(--edge);color:var(--faint);font-size:15px;transition:color .3s}
+  .steps li span{width:22px;font-size:13px}
+  .steps li.on{color:var(--heading)}
+  .steps li.done{color:var(--muted)}
+  .deck{position:relative;height:min(480px,62vh);perspective:1400px;perspective-origin:50% 0%}
+  .scard{position:absolute;inset:0;border-radius:12px;background:linear-gradient(160deg,#16171a,#0f1011 60%);border:.5px solid var(--edge-raised);box-shadow:rgba(0,0,0,.5) 0 30px 60px -10px,var(--shadow);padding:32px;display:grid;grid-template-columns:1fr 1fr;gap:32px;transform-origin:50% 100%;will-change:transform,opacity;overflow:hidden}
+  .scard .num{font-size:15px;color:var(--muted)}
+  .scard h3{font-size:32px;line-height:1.125;font-weight:510;letter-spacing:-.022em;margin-top:12px}
+  .scard p{color:var(--body);margin-top:16px;font-size:17px;line-height:1.5}
+  .scard .who{margin-top:auto;font-size:13px;color:var(--muted);display:flex;gap:6px;flex-wrap:wrap}
+  .scard .who span{padding:3px 10px;border-radius:9999px;background:rgba(255,255,255,.05);box-shadow:rgba(255,255,255,.06) 0 0 0 1px inset}
+  .scard .txt{display:flex;flex-direction:column}
+  .scard .plate{height:100%}
 
-  /* Proof */
-  .proofs{display:grid;grid-template-columns:2fr 1fr;gap:8px;margin-top:96px}
+  /* Werdegang */
+  .cv{margin-top:64px;border-top:1px solid var(--edge)}
+  .cv .row{display:grid;grid-template-columns:240px 1fr 1.3fr;gap:32px;padding:28px 32px;border-bottom:1px solid var(--edge)}
+  .cv .when{color:var(--faint);font-size:13px;padding-top:2px}
+  .cv .org{color:var(--muted)}
+  .cv p{color:var(--muted)}
+
+  /* Stimmen */
+  .proofs{display:grid;grid-template-columns:2fr 1fr;gap:8px;margin-top:64px}
   .proof{position:relative;overflow:hidden;border-radius:8px;padding:24px 32px;height:480px;color:var(--canvas);display:flex;flex-direction:column;transition:filter .16s var(--ease)}
   .proof:hover{filter:brightness(1.03)}
   .proof.blue{background:linear-gradient(#d1e6ff,#ece3ff)}
   .proof.lime{background:var(--lime)}
   .proof .wm{position:absolute;right:-420px;top:-360px;width:1200px;height:1200px;pointer-events:none}
-  .proof .kick{position:relative;font:400 12px/1.4 var(--mono);text-transform:uppercase;opacity:.6}
-  .proof q{position:relative;display:block;quotes:none;font-size:32px;line-height:1.125;letter-spacing:-.022em;margin-top:16px;max-width:820px}
-  .proof .who{position:relative;margin-top:auto;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-  .proof .who svg{width:28px;height:28px}
+  .proof q{position:relative;display:block;quotes:none;font-size:32px;line-height:1.125;letter-spacing:-.022em;max-width:820px}
+  .proof .who{position:relative;margin-top:auto;display:flex;align-items:center;gap:12px}
+  .proof .who svg{width:28px;height:28px;flex:none}
   .proof .who b{display:block;font-weight:510;font-size:15px}
   .proof .who small{display:block;font-size:13px;opacity:.65}
-  .proof .chips{display:flex;gap:6px;margin-left:auto;flex-wrap:wrap}
-  .proof .chip{font-size:12px;padding:3px 10px;border-radius:9999px;background:rgba(8,9,10,.07);box-shadow:rgba(8,9,10,.1) 0 0 0 1px inset}
   .proofline{display:flex;justify-content:space-between;align-items:baseline;gap:32px;margin-top:32px;padding:0 32px;color:var(--muted)}
   .proofline b{font-weight:510;color:var(--heading)}
 
-  /* Skills index */
-  .skills{display:grid;grid-template-columns:repeat(3,1fr);margin-top:96px}
+  /* Projekte */
+  .projects{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px;margin-top:64px}
+  .proj{background:var(--panel);border:.5px solid var(--edge-raised);border-radius:12px;padding:28px;min-height:300px;display:flex;flex-direction:column;box-shadow:var(--shadow)}
+  .proj .k{font-size:13px;color:var(--faint)}
+  .proj h3{font-size:24px;line-height:1.33;font-weight:510;letter-spacing:-.012em;margin-top:6px}
+  .proj p{color:var(--muted);margin-top:8px;max-width:440px}
+  .proj .tags{margin-top:auto;padding-top:24px;display:flex;gap:6px;flex-wrap:wrap;font-size:12px;color:var(--muted)}
+  .proj .tags span{padding:3px 10px;border-radius:9999px;background:rgba(255,255,255,.05);box-shadow:rgba(255,255,255,.06) 0 0 0 1px inset}
+
+  /* Skills */
+  .skills{display:grid;grid-template-columns:repeat(3,1fr);margin-top:64px}
   .skills>div{padding:0 32px;border-left:1px solid var(--edge)}
   .skills>div:first-child{border-left:0}
-  .skills h3{margin-top:8px}
-  .skills ul{list-style:none;margin-top:20px;border-top:1px solid var(--edge)}
-  .skills li{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--edge);color:var(--muted)}
+  .skills ul{list-style:none;margin-top:16px;border-top:1px solid var(--edge)}
+  .skills li{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--edge);color:var(--muted)}
   .skills li i{font-style:normal;color:var(--faint);font-size:13px}
 
-  /* Closing */
+  /* Abschluss */
   .closing{padding:224px 0;text-align:center}
   .closing h2{font-size:72px;line-height:1;font-weight:510;letter-spacing:-.022em;max-width:722px;margin:0 auto}
   .closing p{color:var(--muted);margin-top:16px}
   .closing .acts{display:flex;gap:12px;justify-content:center;margin-top:40px;flex-wrap:wrap}
 
   /* Footer */
-  footer{background:var(--canvas);border-top:1px solid var(--rule)}
+  footer{border-top:1px solid var(--rule)}
   .fgrid{display:grid;grid-template-columns:repeat(6,1fr);padding:56px 0}
   .fgrid>div{padding:0 32px}
   .fgrid svg{width:22px;height:22px}
-  .fgrid h4{font-size:13px;font-weight:510;letter-spacing:-.01em;color:var(--heading);margin-bottom:24px}
+  .fgrid h4{font-size:13px;font-weight:510;margin-bottom:24px}
   .fgrid ul{list-style:none;display:flex;flex-direction:column;gap:2px}
-  .fgrid ul a,.fgrid ul button{display:inline-flex;align-items:center;height:28px;font-size:13px;letter-spacing:-.01em;color:var(--muted);transition:color .16s}
+  .fgrid ul a,.fgrid ul button{display:inline-flex;align-items:center;height:28px;font-size:13px;color:var(--muted);transition:color .16s}
   .fgrid ul a:hover,.fgrid ul button:hover{color:var(--heading)}
   .legal{grid-column:2 / -1;display:flex;gap:24px;flex-wrap:wrap;margin-top:80px;font-size:13px;color:var(--faint)}
 
@@ -233,73 +217,66 @@
   .sheet .grab{padding:10px 0 4px;display:flex;justify-content:center;cursor:grab}
   .sheet .grab i{width:36px;height:4px;border-radius:2px;background:rgba(255,255,255,.18)}
   .sheet .close{position:absolute;right:14px;top:12px;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.05);color:var(--muted);display:grid;place-items:center;z-index:2}
-  .sheet .close:hover{color:var(--heading)}
   .sheet .close svg{width:12px;height:12px}
   .sheet .content{overflow:auto;padding:8px 32px 40px;touch-action:pan-y}
   .sheet .plate{height:min(42vh,380px);margin:8px 0 24px}
-  .sheet h3{font-size:48px;line-height:1;font-weight:510;letter-spacing:-.022em;margin-top:10px}
+  .sheet .k{font-size:13px;color:var(--muted)}
+  .sheet h3{font-size:48px;line-height:1;font-weight:510;letter-spacing:-.022em;margin-top:8px}
   .specs{display:grid;grid-template-columns:1fr 1fr;column-gap:32px;margin-top:24px;border-top:1px solid var(--edge)}
   .specs div{display:flex;gap:10px;align-items:center;padding:12px 0;border-bottom:1px solid var(--edge);color:var(--body)}
   .specs svg{width:14px;height:14px;color:var(--muted);flex:none}
 
-  /* Reveal */
-  .rv{opacity:0;transform:translateY(16px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
-  .rv.vis{opacity:1;transform:none}
-
   @media(max-width:1180px){
-    .navr ul{display:none}
-    .navr .sep{display:none}
-    .board{grid-template-columns:repeat(2,minmax(240px,1fr))}
-    .board .c3{display:none}
+    .navr ul,.navr .sep{display:none}
   }
   @media(max-width:1023px){
     .wide{padding:0 24px}
-    .hero h1{font-size:52px}
-    .h2,.statement{font-size:40px}
-    .pair{grid-template-columns:1fr;row-gap:24px}
-    .benefits,.skills{grid-template-columns:1fr}
-    .benefit,.skills>div{border-left:0;border-top:1px solid var(--edge);padding-top:32px;padding-bottom:40px}
-    .benefit:first-child,.skills>div:first-child{border-top:0}
-    .benefit svg{margin:16px 0 24px}
-    .timeline{grid-template-columns:1fr;gap:40px}
-    .timeline::before{left:36px;right:auto;top:4px;bottom:0;width:1px;height:auto}
-    .entry{padding:0 0 0 28px}
-    .proofs{grid-template-columns:1fr}
-    .proof{height:auto;min-height:380px}
+    .hcopy h1{font-size:52px}
+    .h2{font-size:40px}
+    .pair,.about{grid-template-columns:1fr;row-gap:24px}
+    .about{row-gap:48px}
+    .about .portrait{max-width:440px}
+    .pgrid{grid-template-columns:1fr;row-gap:24px}
+    .pgrid .lead,.steps{display:none}
+    .deck{height:min(440px,56vh)}
+    .cv .row{grid-template-columns:1fr;gap:4px}
+    .proofs,.projects{grid-template-columns:1fr}
+    .proof{height:auto;min-height:360px}
+    .proof .who{margin-top:48px}
+    .skills{grid-template-columns:1fr;row-gap:40px}
+    .skills>div{border-left:0}
     .fgrid{grid-template-columns:repeat(3,1fr);row-gap:40px}
     .fgrid .sym{grid-column:1 / -1}
     .legal{grid-column:1 / -1;margin-top:24px}
+    .track{scroll-padding:0 24px;padding:32px 24px}
   }
   @media(max-width:767px){
-    nav{height:60px}
-    .hero{padding-top:128px}
-    .hero h1{font-size:40px}
-    .hero .support{flex-direction:column;align-items:flex-start;gap:16px}
-    .in,.pair>div,.benefit,.skills>div,.facts>div{padding-left:0;padding-right:0}
-    .index,.timeline,.proofline{padding:0}
-    .timeline::before{left:4px}
-    .stage{margin-top:48px}
-    .casing{grid-template-columns:1fr;height:560px}
-    .casing .side{display:none}
-    .board{grid-template-columns:1fr}
-    .board .c2{display:none}
-    .fg{left:16px;right:16px;width:auto;top:96px}
-    .fg .plate{height:170px}
-    .fade-s{display:none}
-    .chapter{padding:96px 0}
-    .h2,.statement{font-size:34px}
+    nav{height:56px}
+    .in,.pair>div,.about>div,.pgrid>div,.skills>div,.lfacts>div,.ltop,.proofline,.cv .row{padding-left:0;padding-right:0}
+    .hcopy h1{font-size:40px}
+    .hcopy .support{flex-direction:column;align-items:flex-start;gap:12px}
+    .rcard{left:-66px;top:-84px;width:132px;height:168px;padding:6px}
+    .rcard b{font-size:12px;padding-top:6px}
+    .rcard b span{display:none}
+    .ring{top:64%}
+    .h2{font-size:34px}
     .lead{font-size:20px}
-    .facts{grid-template-columns:1fr}
-    .facts>div{border-left:0;padding-bottom:32px}
-    .facts>div+div{border-top:1px solid var(--edge)}
-    .index{grid-template-columns:1fr}
+    .chapter{padding:96px 0}
+    .about .facts{grid-template-columns:1fr}
+    .about .facts div{padding:14px 0;border-bottom:1px solid var(--edge)}
     .ltop{flex-direction:column;align-items:flex-start}
     .tabs{max-width:100%;overflow-x:auto;scrollbar-width:none}
-    .tabs button{flex:none}
-    .pcard{width:78vw}
-    .track{padding:16px 16px 4px;scroll-padding:0 16px}
+    .pcard{width:76vw}
+    .track{scroll-padding:0 16px;padding:28px 16px}
+    .lfacts{grid-template-columns:1fr}
+    .lfacts>div{border-left:0;padding-bottom:32px}
+    .lfacts>div+div{border-top:1px solid var(--edge)}
+    .scard{grid-template-columns:1fr;grid-template-rows:auto 1fr;padding:24px;gap:16px}
+    .scard h3{font-size:26px}
+    .scard p{font-size:15px;margin-top:10px}
+    .scard .who{display:none}
     .proof{padding:24px}
-    .proof q{font-size:26px}
+    .proof q{font-size:24px}
     .proofline{flex-direction:column;gap:8px}
     .closing{padding:160px 0}
     .closing h2{font-size:48px}
@@ -308,10 +285,6 @@
     .specs{grid-template-columns:1fr}
     .sheet .content{padding:8px 20px 32px}
     .sheet h3{font-size:36px}
-  }
-  @media(prefers-reduced-motion:reduce){
-    html{scroll-behavior:auto}
-    .rv{transform:none;transition:opacity .3s}
   }
 </style>
 </head>
@@ -323,7 +296,6 @@
     <symbol id="arrow" viewBox="0 0 12 12"><path fill="none" stroke="currentColor" stroke-width="1.2" d="M2 6h8M6.5 2.5 10 6 6.5 9.5"/></symbol>
     <symbol id="plus" viewBox="0 0 12 12"><path fill="none" stroke="currentColor" stroke-width="1.2" d="M6 1.5v9M1.5 6h9"/></symbol>
     <symbol id="check" viewBox="0 0 14 14"><circle cx="7" cy="7" r="7" fill="currentColor" opacity=".18"/><path fill="none" stroke="currentColor" stroke-width="1.4" d="m4 7.2 2 2 4-4.4"/></symbol>
-    <symbol id="chev" viewBox="0 0 10 10"><path fill="none" stroke="currentColor" stroke-width="1.2" d="m3.5 1.5 3.5 3.5-3.5 3.5"/></symbol>
   </defs>
 </svg>
 
@@ -332,92 +304,99 @@
     <a class="brand" href="#"><svg><use href="#mark"/></svg>Josip Miskovic</a>
     <div class="navr">
       <ul>
+        <li><a href="#ueber-mich">Über mich</a></li>
         <li><a href="#lineup">Lineup</a></li>
-        <li><a href="#zahlen">Zahlen</a></li>
+        <li><a href="#lieferanten">Lieferanten</a></li>
         <li><a href="#werdegang">Werdegang</a></li>
         <li><a href="#projekte">Projekte</a></li>
-        <li><a href="#kontakt">Kontakt</a></li>
       </ul>
       <span class="sep"></span>
       <a class="btn btn-primary btn-sm" href="#kontakt">Kontakt aufnehmen</a>
     </div>
   </div>
+  <i class="progress" id="progress"></i>
 </nav>
 
-<header class="hero">
-  <div class="wide">
-    <div class="in">
-      <div class="small-title eyebrow rv">Josip Miskovic · Product Manager</div>
-      <h1 class="rv">Produkte,<br>die man spürt.</h1>
-      <div class="support rv">
-        <p>Drei Jahre bei Sportstech verantwortlich für alle Rudergeräte, Speedbikes und Crosstrainer. 16 Produkte vom Einstieg bis zum Smart-Gerät.</p>
-        <a class="tlink" href="#lineup">Das Lineup ansehen <svg><use href="#arrow"/></svg></a>
-      </div>
-    </div>
-
-    <div class="stage rv" aria-label="Sortimentsübersicht als Oberfläche">
-      <div class="casing">
-        <aside class="side">
-          <div class="ws"><i>JM</i>Sportstech · Cardio</div>
-          <span class="it on"><em><svg width="12" height="12"><use href="#mark"/></svg>Alle Produkte</em><b>16</b></span>
-          <div class="grp">Kategorien</div>
-          <span class="it"><em><i class="dot d-row"></i>Rudergeräte</em><b>8</b></span>
-          <span class="it"><em><i class="dot d-bike"></i>Speedbikes</em><b>4</b></span>
-          <span class="it"><em><i class="dot d-cross"></i>Crosstrainer</em><b>4</b></span>
-          <div class="grp">Widerstand</div>
-          <span class="it"><em><i class="ring"></i>Wasser</em></span>
-          <span class="it"><em><i class="ring"></i>Magnet</em></span>
-          <span class="it"><em><i class="ring"></i>Luft</em></span>
-        </aside>
-        <div class="main">
-          <div class="bar">
-            <div class="crumb">Sortiment <svg><use href="#chev"/></svg> <b>Nach Preisklasse</b></div>
-            <div>16 Produkte</div>
-          </div>
-          <div class="board" id="board"></div>
+<header class="hero" id="hero">
+  <div class="sticky">
+    <div class="scene"><div class="floor" id="floor"></div><div class="ring" id="ring"></div></div>
+    <div class="hcopy" id="hcopy">
+      <div class="wide"><div class="in">
+        <div class="eyebrow">Josip Miskovic · Product Manager · Sport & Fitness</div>
+        <h1>Produkte,<br>die man spürt.</h1>
+        <div class="support">
+          <p>Drei Jahre bei Sportstech verantwortlich für alle Rudergeräte, Speedbikes und Crosstrainer. 16 Produkte vom Einstieg bis zum Smart-Gerät.</p>
+          <a class="tlink" href="#lineup">Das Lineup ansehen <svg><use href="#arrow"/></svg></a>
         </div>
-      </div>
-      <div class="glow" style="right:56px;top:20px"></div>
-      <div class="fg" id="fg"></div>
-      <div class="fade-s l"></div><div class="fade-s r"></div><div class="fade-b"></div>
+      </div></div>
     </div>
+    <div class="hcopy2" id="hcopy2">
+      <div class="wide"><div class="in">
+        <h2 class="h2">Ein Sortiment. <span class="muted">Drei Welten.</span></h2>
+        <p>16 Produkte in drei Kategorien: Rudergeräte, Speedbikes, Crosstrainer. Mit drei Widerstandssystemen: Wasser, Magnet und Luft.</p>
+      </div></div>
+    </div>
+    <div class="hint" id="hint"><i></i>Scrollen</div>
   </div>
 </header>
 
-<section class="chapter" id="zahlen">
+<section class="chapter" id="ueber-mich">
   <div class="wide">
-    <div class="in">
-      <div class="small-title rv" style="margin-bottom:16px">Auf einen Blick</div>
-      <h2 class="statement rv">Ein Sortiment. <span class="muted">Drei Welten.</span></h2>
-    </div>
-    <div class="benefits">
-      <div class="benefit rv">
-        <div class="mono">Fig 0.1</div>
-        <svg id="fig1" viewBox="0 0 300 300" aria-hidden="true"></svg>
-        <h3>16 Produkte</h3>
-        <p>Produkte verantwortet.</p>
+    <div class="about">
+      <div>
+        <figure class="portrait s3d" data-turn="1">
+          <img src="assets/josip.jpg" alt="Porträt von Josip Miskovic" loading="lazy" width="1000" height="1333">
+          <figcaption>Josip Miskovic · Berlin</figcaption>
+        </figure>
       </div>
-      <div class="benefit rv">
-        <div class="mono">Fig 0.2</div>
-        <svg id="fig2" viewBox="0 0 300 300" aria-hidden="true"></svg>
-        <h3>3 Kategorien</h3>
-        <p>Rudergeräte, Speedbikes, Crosstrainer.</p>
-      </div>
-      <div class="benefit rv">
-        <div class="mono">Fig 0.3</div>
-        <svg id="fig3" viewBox="0 0 300 300" aria-hidden="true"></svg>
-        <h3>3 Widerstandssysteme</h3>
-        <p>Wasser, Magnet und Luft.</p>
+      <div class="s3d">
+        <div class="eyebrow">Über mich</div>
+        <h2 class="h2">Vom Kunden aus gedacht.<br><span class="muted">Mit Partnern gebaut.</span></h2>
+        <p class="lead">Ich bin Josip, Product Manager aus Berlin. In über sechs Jahren bei Sportstech habe ich Fitnessgeräte von allen Seiten kennengelernt: im Kundenservice, im E-Commerce und schließlich im Produktmanagement.</p>
+        <p class="body">Mich interessiert, wie sich ein Gerät im Training anfühlt, und was es braucht, damit es genau so beim Kunden ankommt: gutes Design, verlässliche Liefer- und Produktionspartner, gründliche Prüfung und ein Preis, der passt. Im Team habe ich außerdem Werkstudenten im Produktmanagement angeleitet.</p>
+        <div class="facts">
+          <div><small>Standort</small>Berlin</div>
+          <div><small>Sportstech</small>2020 – 2026</div>
+          <div><small>Sprachen</small>Deutsch, Englisch, Kroatisch</div>
+        </div>
       </div>
     </div>
-    <div class="facts">
-      <div class="rv">
-        <div class="mono">Premium</div>
+  </div>
+</section>
+
+<section class="chapter" id="lineup" style="padding-top:0;padding-bottom:96px">
+  <div class="wide">
+    <div class="pair s3d">
+      <div>
+        <div class="eyebrow">Mein Sortiment bei Sportstech</div>
+        <h2 class="h2">Das Lineup.</h2>
+      </div>
+      <div><p class="lead">Jedes dieser Geräte habe ich als Product Manager verantwortet. Tippe auf eines, um es dir genauer anzusehen.</p></div>
+    </div>
+    <div class="ltop s3d">
+      <div class="tabs" id="seg" role="tablist">
+        <span class="thumb" id="thumb"></span>
+        <button class="on" data-f="all" role="tab">Alle</button>
+        <button data-f="row" role="tab">Rudergeräte</button>
+        <button data-f="bike" role="tab">Speedbikes</button>
+        <button data-f="cross" role="tab">Crosstrainer</button>
+      </div>
+      <div class="arrows">
+        <button id="prev" aria-label="Zurück"><svg style="transform:scaleX(-1)"><use href="#arrow"/></svg></button>
+        <button id="next" aria-label="Weiter"><svg><use href="#arrow"/></svg></button>
+      </div>
+    </div>
+  </div>
+  <div class="track" id="track"></div>
+  <div class="wide">
+    <div class="lfacts s3d">
+      <div>
+        <div class="k">Premium</div>
         <h3>Bis 21,5" Touchdisplay</h3>
         <p>Smart-Geräte mit drehbarem Screen und Trainer-Workouts: sBike, sRow, Aqua Elite.</p>
       </div>
-      <div class="rv">
-        <div class="mono">Ohne Steckdose</div>
+      <div>
+        <div class="k">Ohne Steckdose</div>
         <h3>Strom? Brauchen manche nicht.</h3>
         <p>Der sCross erzeugt seinen Strom selbst, der PROwer Lite läuft mit Batterie.</p>
       </div>
@@ -425,138 +404,100 @@
   </div>
 </section>
 
-<section class="chapter" id="lineup" style="padding-top:0">
-  <div class="wide">
-    <div class="pair">
-      <div class="rv">
-        <div class="small-title">Mein Sortiment bei Sportstech</div>
-        <h2 class="h2">Das Lineup.</h2>
-      </div>
-      <div class="r rv">
-        <p class="lead">Jedes dieser Geräte habe ich als Product Manager verantwortet. Tippe auf eines, um es dir genauer anzusehen.</p>
-      </div>
-    </div>
-    <div class="lineup-stage rv">
-      <div class="casing">
-        <div class="ltop">
-          <div class="tabs" id="seg" role="tablist">
-            <span class="thumb" id="thumb"></span>
-            <button class="on" data-f="all" role="tab">Alle<b>16</b></button>
-            <button data-f="row" role="tab">Rudergeräte<b>8</b></button>
-            <button data-f="bike" role="tab">Speedbikes<b>4</b></button>
-            <button data-f="cross" role="tab">Crosstrainer<b>4</b></button>
-          </div>
-          <div class="arrows">
-            <button id="prev" aria-label="Zurück"><svg style="transform:scaleX(-1)"><use href="#arrow"/></svg></button>
-            <button id="next" aria-label="Weiter"><svg><use href="#arrow"/></svg></button>
-          </div>
+<section class="process" id="lieferanten">
+  <div class="sticky">
+    <div class="wide" style="width:100%">
+      <div class="pgrid">
+        <div>
+          <div class="eyebrow">Lieferanten & Produktion</div>
+          <h2 class="h2">Von der Idee<br>bis ins Wohnzimmer.</h2>
+          <p class="lead">Ein Fitnessgerät entsteht nicht am Schreibtisch. Ich habe neue Produkte vom ersten Gedanken über den Produktionsstart bis zur Markteinführung begleitet, gemeinsam mit Designern, Lieferanten, Produktionspartnern und Prüfinstituten.</p>
+          <ol class="steps" id="steps"></ol>
         </div>
-        <div class="track" id="track"></div>
-      </div>
-      <div class="fade-s r" style="top:58px"></div>
-    </div>
-    <div class="index rv" id="index"></div>
-  </div>
-</section>
-
-<section class="chapter" id="werdegang" style="padding-top:0">
-  <div class="wide">
-    <div class="in">
-      <div class="small-title rv" style="margin-bottom:16px">Werdegang</div>
-      <h2 class="h2 rv">Vom E-Commerce<br>ins Product Management.</h2>
-    </div>
-    <div class="timeline">
-      <div class="entry rv">
-        <div class="item-title">Product Manager</div>
-        <div class="org">Sportstech Brands Holding GmbH · Berlin</div>
-        <p>Verantwortlich für das komplette Sortiment an Rudergeräten, Speedbikes und Crosstrainern, vom Einstiegsmodell bis zum Smart-Gerät mit 21,5" Touchdisplay.</p>
-        <div class="mono">07/2023 – 08/2026</div>
-      </div>
-      <div class="entry rv">
-        <div class="item-title">Ausbildung Kaufmann im E-Commerce</div>
-        <div class="org">Sportstech Brands Holding GmbH · Berlin</div>
-        <p>Onlinehandel, Marktplätze, Produktdaten und Kampagnen, bevor es direkt ins Product Management ging.</p>
-        <div class="mono">08/2021 – 07/2023</div>
-      </div>
-      <div class="entry rv">
-        <div class="item-title">Studium Wirtschaftsinformatik</div>
-        <div class="org">TH Wildau</div>
-        <p>Grundlagen in Informatik, BWL und Prozessen.</p>
-        <div class="mono">2019 – 2020</div>
+        <div><div class="deck" id="deck"></div></div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="chapter" id="projekte" style="padding-top:0">
+<section class="chapter" id="werdegang">
   <div class="wide">
-    <div class="pair">
-      <div class="rv">
-        <div class="small-title">Nebenbei</div>
-        <h2 class="h2">Ich baue auch selbst.</h2>
-      </div>
-      <div class="r rv">
-        <p class="lead">Eigene Apps und Games, entwickelt mit KI. So verstehe ich, wie Produkte von der anderen Seite entstehen.</p>
-      </div>
+    <div class="in s3d">
+      <div class="eyebrow">Werdegang</div>
+      <h2 class="h2">Vom Kundenservice<br>ins Product Management.</h2>
     </div>
-    <div class="proofs">
-      <article class="proof blue rv">
-        <svg class="wm" viewBox="0 0 1200 1200" aria-hidden="true"><g fill="#fff" fill-rule="evenodd" opacity=".55"><path d="M600 0a600 600 0 1 0 0 1200A600 600 0 0 0 600 0Zm0 120a480 480 0 1 1 0 960 480 480 0 0 1 0-960Z"/><path d="M600 240a360 360 0 1 0 0 720 360 360 0 0 0 0-720Zm0 120a240 240 0 1 1 0 480 240 240 0 0 1 0-480Z"/><circle cx="600" cy="600" r="120"/></g></svg>
-        <div class="kick">App · Prototyp</div>
-        <q>Mobile App für iOS und Android, mit der man Basic Strategy trainiert, inklusive XP, Streaks und Achievements.</q>
-        <div class="who">
-          <svg><use href="#mark"/></svg>
-          <div><b>Blackjack Trainer</b><small>App · Prototyp</small></div>
-          <div class="chips"><span class="chip">Flutter</span><span class="chip">iOS / Android</span><span class="chip">Gamification</span></div>
-        </div>
-      </article>
-      <article class="proof lime rv">
-        <div class="kick">Game · in Arbeit</div>
-        <q>Ein eigenes Casual-Game für Roblox, von der Idee bis zum Release.</q>
-        <div class="who">
-          <svg><use href="#mark"/></svg>
-          <div><b>Roblox Game</b><small>Game · in Arbeit</small></div>
-        </div>
-      </article>
-    </div>
-    <div class="proofline rv">
-      <p><b>Faceless Shorts:</b> Animierte Erklär-Shorts für YouTube und TikTok mit KI-Workflow.</p>
-      <span class="mono">Content</span>
+    <div class="cv">
+      <div class="row s3d"><div class="when">07/2023 – 08/2026</div><div><div class="t15">Product Manager</div><div class="org">Sportstech Brands Holding GmbH · Berlin</div></div><p>Verantwortlich für das komplette Sortiment an Rudergeräten, Speedbikes und Crosstrainern, vom Einstiegsmodell bis zum Smart-Gerät mit 21,5" Touchdisplay. Neue Produkte von der Idee bis zur Markteinführung, Prototypen und Muster, Lieferanten und Produktion, Budget und Timing, Preise sowie die Anleitung von Werkstudenten.</p></div>
+      <div class="row s3d"><div class="when">08/2021 – 07/2023</div><div><div class="t15">Ausbildung Kaufmann im E-Commerce</div><div class="org">Sportstech Brands Holding GmbH · Berlin</div></div><p>Onlinehandel, Marktplätze, Produktdaten und Kampagnen, bevor es direkt ins Product Management ging.</p></div>
+      <div class="row s3d"><div class="when">02/2021 – 07/2021</div><div><div class="t15">Verkäufer und Kundenberater</div><div class="org">Customer Success Management · Sportstech</div></div><p>Beratung und Betreuung von Kunden, aktiver Verkauf, Anfragen und Bestellungen. Hier habe ich gelernt, was Kunden an einem Gerät wirklich wichtig ist.</p></div>
+      <div class="row s3d"><div class="when">02/2020 – 01/2021</div><div><div class="t15">Werkstudent</div><div class="org">Sportstech · Berlin</div></div><p>Der Einstieg bei Sportstech, parallel zum Studium.</p></div>
+      <div class="row s3d"><div class="when">2019 – 2020</div><div><div class="t15">Studium Wirtschaftsinformatik</div><div class="org">TH Wildau</div></div><p>Grundlagen in Informatik, BWL und Prozessen.</p></div>
     </div>
   </div>
 </section>
 
 <section class="chapter" style="padding-top:0">
   <div class="wide">
-    <div class="in">
-      <div class="small-title rv" style="margin-bottom:16px">Skills</div>
-      <h2 class="h2 rv">Womit ich arbeite.</h2>
+    <div class="pair s3d">
+      <div>
+        <div class="eyebrow">Stimmen</div>
+        <h2 class="h2">Aus meinem<br>Arbeitszeugnis.</h2>
+      </div>
+      <div><p class="lead">Was Sportstech zum Abschluss über meine Arbeit und die Zusammenarbeit geschrieben hat.</p></div>
+    </div>
+    <div class="proofs">
+      <article class="proof blue s3d">
+        <svg class="wm" viewBox="0 0 1200 1200" aria-hidden="true"><g fill="#fff" fill-rule="evenodd" opacity=".55"><path d="M600 0a600 600 0 1 0 0 1200A600 600 0 0 0 600 0Zm0 120a480 480 0 1 1 0 960 480 480 0 0 1 0-960Z"/><path d="M600 240a360 360 0 1 0 0 720 360 360 0 0 0 0-720Zm0 120a240 240 0 1 1 0 480 240 240 0 0 1 0-480Z"/><circle cx="600" cy="600" r="120"/></g></svg>
+        <q>„Alle seine Aufgaben erfüllte Herr Miskovic stets zu unserer vollsten Zufriedenheit und entsprach unseren Erwartungen in allerbester Weise und jeder Hinsicht.“</q>
+        <div class="who"><svg><use href="#mark"/></svg><div><b>Vice President Product</b><small>Sportstech Brands Holding GmbH · Arbeitszeugnis 2026</small></div></div>
+      </article>
+      <article class="proof lime s3d">
+        <q>„Er war äußerst teamorientiert und trug in jeder Hinsicht zu einer sehr guten Zusammenarbeit bei.“</q>
+        <div class="who"><svg><use href="#mark"/></svg><div><b>Sportstech</b><small>Arbeitszeugnis 2026</small></div></div>
+      </article>
+    </div>
+    <div class="proofline s3d">
+      <p>Über <b>sechs Jahre</b> bei Sportstech, davon <b>drei Jahre</b> als Product Manager für <b>16 Produkte</b>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="projekte" style="padding-top:0">
+  <div class="wide">
+    <div class="pair s3d">
+      <div>
+        <div class="eyebrow">Nebenbei</div>
+        <h2 class="h2">Ich baue auch selbst.</h2>
+      </div>
+      <div><p class="lead">Eigene Apps und Games, entwickelt mit KI. So verstehe ich, wie Produkte von der anderen Seite entstehen.</p></div>
+    </div>
+    <div class="projects">
+      <article class="proj s3d"><div class="k">App · Prototyp</div><h3>Blackjack Trainer</h3><p>Mobile App für iOS und Android, mit der man Basic Strategy trainiert, inklusive XP, Streaks und Achievements.</p><div class="tags"><span>Flutter</span><span>iOS / Android</span><span>Gamification</span></div></article>
+      <article class="proj s3d"><div class="k">Content</div><h3>Faceless Shorts</h3><p>Animierte Erklär-Shorts für YouTube und TikTok mit KI-Workflow.</p></article>
+      <article class="proj s3d"><div class="k">Game · in Arbeit</div><h3>Roblox Game</h3><p>Ein eigenes Casual-Game für Roblox, von der Idee bis zum Release.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" style="padding-top:0">
+  <div class="wide">
+    <div class="in s3d">
+      <div class="eyebrow">Skills</div>
+      <h2 class="h2">Womit ich arbeite.</h2>
     </div>
     <div class="skills">
-      <div class="rv">
-        <div class="mono">01</div>
-        <h3 class="item-title">Product</h3>
-        <ul><li>Produktentwicklung & Launch</li><li>Sortimentsplanung</li><li>E-Commerce & Marktplätze</li><li>Roadmaps & Priorisierung</li></ul>
-      </div>
-      <div class="rv">
-        <div class="mono">02</div>
-        <h3 class="item-title">Tech</h3>
-        <ul><li>Flutter / Dart</li><li>Prototyping mit KI</li><li>Git, VS Code</li></ul>
-      </div>
-      <div class="rv">
-        <div class="mono">03</div>
-        <h3 class="item-title">Sprachen</h3>
-        <ul><li>Deutsch <i>Muttersprache</i></li><li>Englisch <i>verhandlungssicher</i></li><li>Kroatisch <i>Grundkenntnisse</i></li></ul>
-      </div>
+      <div class="s3d"><div class="t15">Product</div><ul><li>Produktentwicklung & Launch</li><li>Prototypen & Muster</li><li>Lieferanten & Produktionspartner</li><li>Sortimentsplanung</li><li>Markt- & Trendanalysen</li><li>Preisgestaltung</li><li>Budget- & Timing-Kontrolle</li></ul></div>
+      <div class="s3d"><div class="t15">Business & Tech</div><ul><li>E-Commerce & Marktplätze</li><li>Roadmaps & Priorisierung</li><li>Flutter / Dart</li><li>Prototyping mit KI</li><li>Git, VS Code</li></ul></div>
+      <div class="s3d"><div class="t15">Sprachen</div><ul><li>Deutsch <i>Muttersprache</i></li><li>Englisch <i>verhandlungssicher</i></li><li>Kroatisch <i>Grundkenntnisse</i></li></ul></div>
     </div>
   </div>
 </section>
 
 <section class="closing" id="kontakt">
-  <div class="wide">
-    <h2 class="rv">Lass uns<br>sprechen.</h2>
-    <p class="rv">Ich suche eine neue Rolle als Product Manager in Berlin oder remote.</p>
-    <div class="acts rv">
+  <div class="wide s3d">
+    <h2>Lass uns<br>sprechen.</h2>
+    <p>Ich suche eine neue Rolle als Product Manager in Berlin oder remote.</p>
+    <div class="acts">
       <a class="btn btn-primary" href="mailto:DEINE-EMAIL@example.com">E-Mail schreiben</a>
       <a class="btn btn-secondary" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
@@ -567,22 +508,10 @@
   <div class="wide">
     <div class="fgrid">
       <div class="sym"><svg><use href="#mark"/></svg></div>
-      <div>
-        <h4>Seite</h4>
-        <ul><li><a href="#lineup">Lineup</a></li><li><a href="#zahlen">Zahlen</a></li><li><a href="#werdegang">Werdegang</a></li><li><a href="#projekte">Projekte</a></li></ul>
-      </div>
-      <div>
-        <h4>Lineup</h4>
-        <ul><li><button data-jump="row">Rudergeräte</button></li><li><button data-jump="bike">Speedbikes</button></li><li><button data-jump="cross">Crosstrainer</button></li></ul>
-      </div>
-      <div>
-        <h4>Kontakt</h4>
-        <ul><li><a href="mailto:DEINE-EMAIL@example.com">E-Mail</a></li><li><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li></ul>
-      </div>
-      <div class="legal">
-        <span>Copyright © 2026 Josip Miskovic. Berlin.</span>
-        <span>Produktbilder: Sportstech</span>
-      </div>
+      <div><h4>Seite</h4><ul><li><a href="#ueber-mich">Über mich</a></li><li><a href="#lineup">Lineup</a></li><li><a href="#lieferanten">Lieferanten</a></li><li><a href="#werdegang">Werdegang</a></li><li><a href="#projekte">Projekte</a></li></ul></div>
+      <div><h4>Lineup</h4><ul><li><button data-jump="row">Rudergeräte</button></li><li><button data-jump="bike">Speedbikes</button></li><li><button data-jump="cross">Crosstrainer</button></li></ul></div>
+      <div><h4>Kontakt</h4><ul><li><a href="mailto:DEINE-EMAIL@example.com">E-Mail</a></li><li><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li></ul></div>
+      <div class="legal"><span>Copyright © 2026 Josip Miskovic. Berlin.</span><span>Produktbilder: Sportstech</span></div>
     </div>
   </div>
 </footer>
@@ -597,7 +526,6 @@
 <script>
 const CDN='https://cdn.shopify.com/s/files/1/1011/5022/8822/files/';
 const CAT={row:'Rudergerät',bike:'Speedbike',cross:'Crosstrainer'};
-const CATP={row:'Rudergeräte',bike:'Speedbikes',cross:'Crosstrainer'};
 const P=[
  {c:'row',n:'Aqua Elite',i:'01_9132247e-dc75-44fb-a318-43d1c2b72e12.png?v=1785159099',t:'Premium',f:['Echter Wasserwiderstand','Rahmen aus Holz & Aluminium','21,5" Touchdisplay, 330° drehbar','Klappbar']},
  {c:'row',n:'sRow',i:'section_1_de1beac1-900c-487b-b53c-b2dc656566fd.jpg?v=1784903004',t:'Premium',f:['Magnetwiderstand, 24 Stufen','21,5" Touchdisplay, drehbar','LED-Feedback nach Puls','Klappbar']},
@@ -616,68 +544,64 @@ const P=[
  {c:'cross',n:'CX625',i:'section_1_dc85f211-083d-4166-b394-c291292ebd53.jpg?v=1784903365',t:'Einstieg',f:['32 Widerstandsstufen','LED-Knob-Display','App-Steuerung','Pulssensor']},
  {c:'cross',n:'CX608',i:'section1_5b2770c6-5d0c-4a5a-ac22-a132f604b269.jpg?v=1785160663',t:'Einstieg',f:['8 Magnet-Widerstandsstufen','Pulsmessung am Griff','Riemenantrieb','Transportrollen']}
 ];
+const STEPS=[
+ {n:'Markt & Idee',p:'Laufende Marktbeobachtung, Markt- und Trendanalysen. Daraus entstehen Geschäftsmodelle und Vermarktungskonzepte für neue Produkte.',w:['Marktanalyse','Konzept'],img:'sCross'},
+ {n:'Design',p:'Gemeinsam mit internen und externen Produktdesignern wird aus der Idee ein Gerät, das sich im Training gut anfühlt.',w:['Produktdesigner','Design-Team'],img:'Aqua Elite'},
+ {n:'Prototypen & Muster',p:'Prototypen und Muster aufbauen, testen und beurteilen, bis das Gerät reif für die Produktion ist.',w:['Prototypen','Muster'],img:'sRow'},
+ {n:'Lieferanten & Produktion',p:'Enge Abstimmung mit Liefer- und Produktionspartnern bis zum Produktionsstart, mit eigener Verantwortung für Budget und Timing.',w:['Lieferanten','Produktionspartner','Budget & Timing'],img:'WRX1000'},
+ {n:'Prüfung',p:'Zusammenarbeit mit externen Prüfinstituten, damit jedes Gerät geprüft in den Markt geht.',w:['Prüfinstitute'],img:'sBike'},
+ {n:'Markteinführung & danach',p:'Launch mit dem Design- und Marketingteam. Danach Preise anpassen und Produkte weiter verbessern, für zufriedene Kunden.',w:['Marketing','Preise','Kundenzufriedenheit'],img:'sAir'}
+];
 const img=(p,w)=>`${CDN}${p.i}&width=${w}`;
 const pic=(p,w,eager)=>`<img src="${img(p,w)}" alt="Sportstech ${p.n}" ${eager?'':'loading="lazy"'} draggable="false" onerror="this.style.visibility='hidden'">`;
+const byName=n=>P.find(p=>p.n===n);
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-const code=(p)=>({row:'RW',bike:'SB',cross:'CT'}[p.c])+'-'+String(P.filter(q=>q.c===p.c).indexOf(p)+1).padStart(2,'0');
+const clamp=(v,a=0,b=1)=>Math.min(b,Math.max(a,v));
+const ease=t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
 const check='<svg><use href="#check"/></svg>';
 
-/* Hero-Instrument: Board nach Preisklasse + Detailfenster */
-const board=document.getElementById('board');
-['Premium','Mittelklasse','Einstieg'].forEach((t,ci)=>{
-  const items=P.filter(p=>p.t===t);
-  const col=document.createElement('div');col.className='c'+(ci+1);
-  col.innerHTML=`<div class="col-h">${t} <span>${items.length}</span></div>`+items.map(p=>`<div class="tkt"><div class="top"><span class="mono">${code(p)}</span><i class="dot d-${p.c}"></i></div><h4>${p.n}</h4><p>${p.f[0]}</p><span class="tag"><i class="dot d-${p.c}" style="width:6px;height:6px"></i>${CAT[p.c]}</span></div>`).join('');
-  board.appendChild(col)});
-(()=>{const p=P.find(x=>x.n==='sBike');
-  document.getElementById('fg').innerHTML=`<div class="head"><span><b>${p.n}</b> · ${code(p)}</span><span class="mono">Premium</span></div>
-  <div class="body"><div class="plate">${pic(p,800,true)}</div><h3>${p.n}</h3><div class="meta"><i class="dot d-bike"></i>${CAT[p.c]} · ${p.t}</div>
-  <ul>${p.f.map(x=>`<li>${check}${x}</li>`).join('')}</ul></div>
-  <div class="status"><span><i class="dot" style="background:#4cb782;width:6px;height:6px"></i>Im Sortiment</span><span class="mono">Fig 1.0</span></div>`})();
-
-/* Isometrische Drahtgitter-Figuren */
-const NS='http://www.w3.org/2000/svg';
-function iso(svg,cx,cy,boxes){
-  const pt=(x,y,z)=>`${(cx+(x-y)*.866).toFixed(1)},${(cy+(x+y)*.5-z).toFixed(1)}`;
-  let out=`<defs><linearGradient id="${svg.id}g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="1"/><stop offset="1" stop-color="#fff" stop-opacity=".35"/></linearGradient><mask id="${svg.id}m"><rect width="300" height="300" fill="url(#${svg.id}g)"/></mask></defs><g mask="url(#${svg.id}m)">`;
-  boxes.forEach(b=>{const {x,y,z,w,d,h,a}=b;const z1=z+h,s=`stroke="rgba(255,255,255,${a})" stroke-width="1" stroke-linejoin="round"`;
-    out+=`<polygon points="${pt(x,y+d,z)} ${pt(x+w,y+d,z)} ${pt(x+w,y+d,z1)} ${pt(x,y+d,z1)}" fill="#0b0c0d" ${s}/>`;
-    out+=`<polygon points="${pt(x+w,y,z)} ${pt(x+w,y+d,z)} ${pt(x+w,y+d,z1)} ${pt(x+w,y,z1)}" fill="#08090a" ${s}/>`;
-    out+=`<polygon points="${pt(x,y,z1)} ${pt(x+w,y,z1)} ${pt(x+w,y+d,z1)} ${pt(x,y+d,z1)}" fill="#0f1011" stroke="rgba(255,255,255,${Math.min(.4,a+.08)})" stroke-width="1" stroke-linejoin="round"/>`;
-    if(b.edge)out+=`<polyline points="${pt(x,y+d,z1)} ${pt(x+w,y+d,z1)} ${pt(x+w,y,z1)}" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="1"/>`;
-  });
-  svg.innerHTML=out+'</g>';
+/* ---------- Hero: 3D-Produktring ---------- */
+const ring=document.getElementById('ring');
+const rcards=P.map((p,i)=>{const d=document.createElement('div');d.className='rcard';
+  d.innerHTML=`<div class="plate">${pic(p,400,i<6)}</div><b>${p.n}<span>${p.t}</span></b>`;ring.appendChild(d);return d});
+const hero=document.getElementById('hero'),hcopy=document.getElementById('hcopy'),hcopy2=document.getElementById('hcopy2'),hint=document.getElementById('hint'),floor=document.getElementById('floor');
+function heroFrame(){
+  const r=hero.getBoundingClientRect(),total=hero.offsetHeight-innerHeight;
+  const p=reduce?.35:clamp(-r.top/total);
+  const mob=innerWidth<768,R=mob?360:600,step=360/P.length;
+  const rot=-p*300-12, tilt=-14+ease(clamp(p/.6))*10;
+  const rise=(1-ease(clamp(p/.55)))*(mob?16:20);
+  const z=-R*.9+ease(clamp(p/.6))*R*.35;
+  ring.style.transform=`translate3d(0,${rise}vh,${z}px) rotateX(${tilt}deg) rotateY(${rot}deg)`;
+  floor.style.opacity=.5+p*.5;
+  rcards.forEach((c,i)=>{const a=(i*step+rot)*Math.PI/180,f=(Math.cos(a)+1)/2;
+    c.style.transform=`rotateY(${i*step}deg) translateZ(${R}px)`;
+    c.style.opacity=(.18+.82*f).toFixed(3);c.style.filter=`brightness(${(.35+.65*f).toFixed(3)})`});
+  const o1=1-clamp(p/.3);hcopy.style.opacity=o1;hcopy.style.transform=`translateY(${-p*120}px)`;hcopy.style.visibility=o1<=0?'hidden':'visible';
+  const o2=clamp((p-.55)/.2);hcopy2.style.opacity=o2;hcopy2.style.transform=`translateY(${(1-o2)*40}px)`;hcopy2.style.visibility=o2<=0?'hidden':'visible';
+  hint.style.opacity=1-clamp(p/.08);
 }
-/* 16 gestapelte Platten = 16 Produkte */
-iso(document.getElementById('fig1'),150,150,Array.from({length:16},(_,i)=>({x:0,y:0,z:i*8.6,w:150,d:150,h:3,a:.08+i*.011,edge:i===15})));
-/* 3 Quader = 3 Kategorien */
-iso(document.getElementById('fig2'),150,150,[
-  {x:0,y:0,z:0,w:62,d:62,h:140,a:.2,edge:true},
-  {x:76,y:0,z:0,w:62,d:62,h:95,a:.2,edge:true},
-  {x:0,y:76,z:0,w:62,d:62,h:55,a:.2,edge:true}]);
-/* aufsteigende Lamellen = Widerstandsstufen */
-iso(document.getElementById('fig3'),139,118,Array.from({length:8},(_,i)=>({x:i*20,y:0,z:0,w:6,d:120,h:24+i*17,a:.1+i*.025,edge:i===7})));
 
-/* Lineup */
+/* ---------- Lineup ---------- */
 const track=document.getElementById('track');
 P.forEach((p,i)=>{const d=document.createElement('article');d.className='pcard';d.dataset.c=p.c;d.tabIndex=0;
-  d.innerHTML=`<div class="plate">${pic(p,640)}</div><div class="row1"><span class="mono">${code(p)}</span><span class="mono">${p.t}</span></div><h3>${p.n}</h3><div class="cat"><i class="dot d-${p.c}"></i>${CAT[p.c]}</div><ul>${p.f.slice(0,3).map(x=>`<li>${x}</li>`).join('')}</ul><div class="go"><span>Ansehen</span><svg><use href="#plus"/></svg></div>`;
+  d.innerHTML=`<div class="plate">${pic(p,640)}</div><div class="tier">${p.t}</div><h3>${p.n}</h3><div class="cat">${CAT[p.c]}</div><ul>${p.f.slice(0,3).map(x=>`<li>${x}</li>`).join('')}</ul><div class="go"><span>Ansehen</span><svg><use href="#plus"/></svg></div>`;
   let sx=0,sy0=0;d.addEventListener('pointerdown',e=>{sx=e.clientX;sy0=e.clientY});
   d.addEventListener('click',e=>{if(Math.hypot(e.clientX-sx,e.clientY-sy0)<10)openSheet(i)});
   d.addEventListener('keydown',e=>{if(e.key==='Enter')openSheet(i)});
   track.appendChild(d)});
-const cardStep=()=>track.querySelector('.pcard:not(.hide)').getBoundingClientRect().width+12;
+const pcards=[...track.children];
+const cardStep=()=>track.querySelector('.pcard:not(.hide)').getBoundingClientRect().width+16;
 document.getElementById('next').onclick=()=>track.scrollBy({left:cardStep(),behavior:reduce?'auto':'smooth'});
 document.getElementById('prev').onclick=()=>track.scrollBy({left:-cardStep(),behavior:reduce?'auto':'smooth'});
+/* Coverflow: Karten drehen sich je nach Position in 3D */
+function coverflow(){if(reduce)return;const w=innerWidth,mid=w/2;
+  pcards.forEach(c=>{if(c.classList.contains('hide'))return;const r=c.getBoundingClientRect();if(r.right<-200||r.left>w+200)return;
+    const n=clamp(((r.left+r.width/2)-mid)/w,-1,1);
+    c.style.transform=`perspective(1200px) rotateY(${(-n*28).toFixed(2)}deg) translateZ(${(-Math.abs(n)*140).toFixed(1)}px)`});}
+track.addEventListener('scroll',()=>requestAnimationFrame(coverflow),{passive:true});
 
-/* Feature-Index unter der Bühne */
-const index=document.getElementById('index');
-['row','bike','cross'].forEach(c=>{const b=document.createElement('button');
-  b.innerHTML=`<span><i class="dot d-${c}"></i>${CATP[c]} · ${P.filter(p=>p.c===c).map(p=>p.n).join(', ')}</span><svg><use href="#plus"/></svg>`;
-  b.onclick=()=>setFilter(c);index.appendChild(b)});
-{const b=document.createElement('button');b.innerHTML=`<span>Alle 16 Produkte</span><svg><use href="#plus"/></svg>`;b.onclick=()=>setFilter('all');index.appendChild(b)}
-
-/* Feder */
+/* Spring */
 function Spring(value,{damping=1,response=.4}={}){
   const s={value,target:value,velocity:0,damping,response,onUpdate:null,running:false};let last=0;
   function step(t){const dt=Math.min(.032,(t-last)/1000||.016);last=t;
@@ -692,22 +616,22 @@ function Spring(value,{damping=1,response=.4}={}){
   return s;
 }
 
-/* Tabs */
+/* Filter-Tabs */
 const seg=document.getElementById('seg'),thumb=document.getElementById('thumb');
 const tx=Spring(0,{damping:1,response:.35}),tw=Spring(0,{damping:1,response:.35});
 tx.onUpdate=tw.onUpdate=()=>{thumb.style.transform=`translateX(${tx.value}px)`;thumb.style.width=tw.value+'px'};
-function placeThumb(b,instant){const r=b.getBoundingClientRect(),s=seg.getBoundingClientRect(),x=r.left-s.left+seg.scrollLeft;
+function placeThumb(b,instant){const r=b.getBoundingClientRect(),s=seg.getBoundingClientRect(),x=r.left-s.left+seg.scrollLeft-3;
   if(instant){tx.set(x);tw.set(r.width)}else{tx.to(x);tw.to(r.width)}}
 function setFilter(f){const b=seg.querySelector(`[data-f="${f}"]`);
   seg.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));placeThumb(b);
-  track.querySelectorAll('.pcard').forEach(c=>c.classList.toggle('hide',!(f==='all'||c.dataset.c===f)));
-  track.scrollTo({left:0,behavior:reduce?'auto':'smooth'})}
+  pcards.forEach(c=>c.classList.toggle('hide',!(f==='all'||c.dataset.c===f)));
+  track.scrollTo({left:0,behavior:'auto'});requestAnimationFrame(coverflow)}
 seg.addEventListener('click',e=>{const b=e.target.closest('button');if(b)setFilter(b.dataset.f)});
 document.querySelectorAll('[data-jump]').forEach(b=>b.onclick=()=>{setFilter(b.dataset.jump);document.getElementById('lineup').scrollIntoView({behavior:reduce?'auto':'smooth'})});
 const initThumb=()=>placeThumb(seg.querySelector('button.on'),true);
-addEventListener('load',initThumb);addEventListener('resize',initThumb);if(document.fonts)document.fonts.ready.then(initThumb);
+addEventListener('load',initThumb);if(document.fonts)document.fonts.ready.then(initThumb);
 
-/* Desktop-Drag im Lineup */
+/* Desktop-Drag */
 (()=>{let down=false,x0=0,s0=0,hist=[];
  track.addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse')return;down=true;x0=e.clientX;s0=track.scrollLeft;hist=[{x:e.clientX,t:performance.now()}];track.style.scrollSnapType='none'});
  addEventListener('pointermove',e=>{if(!down)return;track.scrollLeft=s0-(e.clientX-x0);hist.push({x:e.clientX,t:performance.now()});if(hist.length>6)hist.shift()});
@@ -718,13 +642,53 @@ addEventListener('load',initThumb);addEventListener('resize',initThumb);if(docum
   setTimeout(()=>{track.style.scrollSnapType=''},600)});
 })();
 
-/* Sheet */
+/* ---------- Lieferanten: 3D-Kartenstapel ---------- */
+const deck=document.getElementById('deck'),stepsEl=document.getElementById('steps'),proc=document.getElementById('lieferanten');
+const scards=STEPS.map((s,i)=>{const d=document.createElement('article');d.className='scard';
+  d.innerHTML=`<div class="txt"><div class="num">Schritt ${i+1} von ${STEPS.length}</div><h3>${s.n}</h3><p>${s.p}</p><div class="who">${s.w.map(x=>`<span>${x}</span>`).join('')}</div></div><div class="plate">${pic(byName(s.img),600)}</div>`;
+  deck.appendChild(d);
+  const li=document.createElement('li');li.innerHTML=`<span>${String(i+1).padStart(2,'0')}</span>${s.n}`;stepsEl.appendChild(li);return d});
+const lis=[...stepsEl.children];
+function processFrame(){
+  const r=proc.getBoundingClientRect(),total=proc.offsetHeight-innerHeight;
+  const p=clamp(-r.top/total),s=reduce?Math.round(p*(STEPS.length-1)):clamp(p*1.14-.08)*(STEPS.length-1);
+  scards.forEach((c,i)=>{const d=i-s;let t='',o=1;
+    if(d<0&&i<STEPS.length-1){const k=clamp(-d);t=`translate3d(0,${-k*70}%,${k*120}px) rotateX(${k*55}deg)`;o=1-clamp((k-.35)/.5);}
+    else{const k=Math.max(0,d);t=`translate3d(0,${k*26}px,${-k*90}px)`;o=clamp(1-k*.3);}
+    c.style.transform=t;c.style.opacity=o.toFixed(3);c.style.zIndex=100-i;c.style.visibility=o<=.01?'hidden':'visible'});
+  const cur=Math.min(STEPS.length-1,Math.round(s));
+  lis.forEach((l,i)=>{l.classList.toggle('on',i===cur);l.classList.toggle('done',i<cur)});
+}
+
+/* ---------- Scroll-3D für alle Abschnitte ---------- */
+const s3d=[...document.querySelectorAll('.s3d')];
+function sectionsFrame(){const H=innerHeight;
+  s3d.forEach(el=>{const r=el.getBoundingClientRect();
+    if(r.top>H+100||r.bottom<-100)return;
+    const q=ease(clamp((H-r.top)/(H*.55))); const f=1-q;
+    const g=clamp((H*.18-r.bottom)/(H*.3));
+    let rx=f*16-g*12, ty=f*90, tz=-f*160-g*120, ry=0;
+    if(el.dataset.turn){ry=clamp(((r.top+r.height/2)-H/2)/H,-1,1)*-14}
+    el.style.transform=`perspective(1400px) translate3d(0,${ty.toFixed(1)}px,${tz.toFixed(1)}px) rotateX(${rx.toFixed(2)}deg) rotateY(${ry.toFixed(2)}deg)`;
+    el.style.opacity=(clamp(q*1.15)*(1-g*.7)).toFixed(3)});
+}
+
+/* ---------- Scroll-Loop ---------- */
+const progress=document.getElementById('progress');
+let ticking=false;
+function frame(){ticking=false;heroFrame();processFrame();if(!reduce)sectionsFrame();coverflow();
+  progress.style.transform=`scaleX(${clamp(scrollY/(document.documentElement.scrollHeight-innerHeight))})`}
+addEventListener('scroll',()=>{if(!ticking){ticking=true;requestAnimationFrame(frame)}},{passive:true});
+addEventListener('resize',()=>{frame();initThumb()});
+frame();
+
+/* ---------- Produkt-Sheet ---------- */
 const sheet=document.getElementById('sheet'),scrim=document.getElementById('scrim'),sc=document.getElementById('sheetContent');
 const sy=Spring(1.05,{damping:1,response:.4});
-sy.onUpdate=v=>{sheet.style.visibility=v>=1.04?'hidden':'visible';sheet.style.transform=`translate(-50%,${v*100}%)`;scrim.style.opacity=Math.max(0,Math.min(1,1-v))};
+sy.onUpdate=v=>{sheet.style.visibility=v>=1.04?'hidden':'visible';sheet.style.transform=`translate(-50%,${v*100}%)`;scrim.style.opacity=clamp(1-v)};
 let open=false;
 function openSheet(i){const p=P[i];
-  sc.innerHTML=`<div class="plate">${pic(p,1400,true)}</div><div class="mono">${code(p)} · ${CAT[p.c]} · ${p.t}</div><h3>${p.n}</h3><div class="specs">${p.f.map(x=>`<div>${check}${x}</div>`).join('')}</div>`;
+  sc.innerHTML=`<div class="plate">${pic(p,1400,true)}</div><div class="k">${CAT[p.c]} · ${p.t}</div><h3>${p.n}</h3><div class="specs">${p.f.map(x=>`<div>${check}${x}</div>`).join('')}</div>`;
   scrim.classList.add('on');open=true;sy.damping=1;sy.to(0);document.body.style.overflow='hidden'}
 function closeSheet(v){open=false;sy.damping=1;sy.to(1.05,v);scrim.classList.remove('on');document.body.style.overflow=''}
 scrim.addEventListener('click',()=>closeSheet());
@@ -741,10 +705,6 @@ addEventListener('keydown',e=>{if(e.key==='Escape'&&open)closeSheet()});
    if(sy.value+proj>.35)closeSheet(vel/h);else{sy.damping=.8;sy.to(0,vel/h)}};
  sheet.addEventListener('pointerup',end);sheet.addEventListener('pointercancel',end);
 })();
-
-/* Reveal */
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target)}}),{rootMargin:'0px 0px -6% 0px'});
-document.querySelectorAll('.rv').forEach((el,i)=>{if(el.closest('.hero'))el.style.transitionDelay=i*60+'ms';io.observe(el)});
 </script>
 </body>
 </html>
