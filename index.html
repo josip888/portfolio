@@ -70,6 +70,40 @@
   footer{border-top:1px solid var(--line);padding:28px 0;font-size:13px;color:var(--muted)}
   footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 
+
+  /* Sortiment */
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:8px 0 40px}
+  .stat{padding:24px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius)}
+  .stat b{display:block;font-size:40px;letter-spacing:-.03em;line-height:1.1;color:var(--accent)}
+  .stat span{font-size:14px;color:var(--muted)}
+  .tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}
+  .tabs button{font:inherit;font-size:14px;padding:9px 16px;border-radius:99px;border:1px solid var(--line);background:none;color:var(--muted);cursor:pointer;transition:all .2s}
+  .tabs button.on{background:var(--accent);color:#0c0c0d;border-color:var(--accent);font-weight:600}
+  .ladder{padding:28px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);margin-bottom:24px}
+  .ladder h4{font-size:15px;margin-bottom:4px}
+  .ladder small{color:var(--muted);font-size:13px}
+  .scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .track{min-width:620px;position:relative;height:150px;margin:24px 8px 8px}
+  .axis{position:absolute;left:0;right:0;bottom:24px;height:2px;background:linear-gradient(90deg,#2b2b30,var(--accent))}
+  .tick{position:absolute;bottom:0;font-size:12px;color:var(--muted);transform:translateX(-50%)}
+  .pin{position:absolute;bottom:26px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;transition:opacity .3s}
+  .pin i{width:12px;height:12px;border-radius:50%;background:var(--c);box-shadow:0 0 10px var(--c);margin-top:4px}
+  .pin em{font-style:normal;font-size:12px;white-space:nowrap;color:var(--text)}
+  .pin .stem{width:1px;background:var(--line)}
+  .pin.dim{opacity:.15}
+  .legend{display:flex;gap:18px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin-top:14px}
+  .legend span::before{content:"";display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--c);margin-right:6px}
+  .products{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+  .prod{padding:22px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);transition:transform .2s,border-color .2s}
+  .prod:hover{transform:translateY(-3px);border-color:var(--c)}
+  .prod svg{width:100%;height:92px;margin-bottom:14px;color:var(--c)}
+  .prod .cat{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--c)}
+  .prod h3{font-size:18px;margin:2px 0 10px}
+  .prod ul{list-style:none;display:grid;gap:4px;font-size:13px;color:var(--muted)}
+  .prod ul li::before{content:"– "}
+  .tier{display:inline-block;margin-top:14px;font-size:11px;padding:3px 9px;border-radius:99px;border:1px solid var(--line);color:var(--muted)}
+  @media(max-width:640px){.stats{grid-template-columns:1fr}.stat b{font-size:32px}.products{grid-template-columns:1fr 1fr;gap:10px}.prod{padding:16px}.prod svg{height:64px}.prod h3{font-size:16px}}
+
   @media(max-width:640px){
     nav ul{display:none}
     header{padding:80px 0 64px}
@@ -85,6 +119,7 @@
     <ul>
       <li><a href="#about">Über mich</a></li>
       <li><a href="#experience">Erfahrung</a></li>
+      <li><a href="#sortiment">Sortiment</a></li>
       <li><a href="#projects">Projekte</a></li>
       <li><a href="#contact">Kontakt</a></li>
     </ul>
@@ -120,7 +155,7 @@
         <div>
           <h3>Product Manager</h3>
           <div class="org">Sportstech Brands Holding GmbH · Berlin</div>
-          <p>Verantwortung für Produkte im Bereich Fitness- und Sportgeräte im E-Commerce.</p>
+          <p>Verantwortlich für das komplette Sortiment an Rudergeräten, Speedbikes und Crosstrainern, vom Einstiegsmodell bis zum Smart-Gerät mit Touch-Display und Sportstech Live App.</p>
         </div>
       </div>
       <div class="job">
@@ -140,6 +175,41 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+
+<section id="sortiment">
+  <div class="wrap">
+    <div class="label">Mein Sortiment bei Sportstech</div>
+    <h2>Drei Kategorien. Vom Einstieg bis Premium.</h2>
+    <p class="lead" style="margin-bottom:36px">Diese Produkte habe ich als Product Manager verantwortet: Rudergeräte, Speedbikes und Crosstrainer für das Training zu Hause.</p>
+
+    <div class="stats">
+      <div class="stat"><b id="sCount">16</b><span>Produkte verantwortet</span></div>
+      <div class="stat"><b>3</b><span>Kategorien: Rudergeräte, Speedbikes, Crosstrainer</span></div>
+      <div class="stat"><b>279–1.499 €</b><span>Preisspanne (UVP) im Sortiment</span></div>
+    </div>
+
+    <div class="tabs" id="tabs">
+      <button class="on" data-f="all">Alle</button>
+      <button data-f="row">Rudergeräte</button>
+      <button data-f="bike">Speedbikes</button>
+      <button data-f="cross">Crosstrainer</button>
+    </div>
+
+    <div class="ladder">
+      <h4>Preispositionierung</h4>
+      <small>Jeder Punkt ist ein Produkt, platziert nach ungefährer UVP</small>
+      <div class="scroll"><div class="track" id="track"><div class="axis"></div></div></div>
+      <div class="legend">
+        <span style="--c:#d9ff5b">Rudergeräte</span>
+        <span style="--c:#5bd0ff">Speedbikes</span>
+        <span style="--c:#ff8a5b">Crosstrainer</span>
+      </div>
+    </div>
+
+    <div class="products" id="products"></div>
   </div>
 </section>
 
@@ -208,5 +278,48 @@
   </div>
 </footer>
 
+
+<script>
+const COL={row:'#d9ff5b',bike:'#5bd0ff',cross:'#ff8a5b'};
+const CATNAME={row:'Rudergerät',bike:'Speedbike',cross:'Crosstrainer'};
+const ICON={
+ row:'<svg viewBox="0 0 200 90" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M18 70h150"/><path d="M30 70l10-14h120l8 14"/><circle cx="38" cy="46" r="14"/><path d="M52 46l40-10"/><rect x="96" y="44" width="24" height="8" rx="3"/><path d="M150 56l10-22"/><path d="M155 34h14"/><path d="M24 80h12M150 80h12"/></svg>',
+ bike:'<svg viewBox="0 0 200 90" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="62" cy="58" r="20"/><circle cx="62" cy="58" r="5"/><path d="M62 58l38-30 26 32"/><path d="M100 28l-6-12M86 16h18"/><path d="M126 60l14-34h16"/><path d="M40 80h50M110 80h50"/><path d="M62 78v2M136 60v20"/></svg>',
+ cross:'<svg viewBox="0 0 200 90" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M30 80h140"/><circle cx="56" cy="62" r="14"/><path d="M56 62l60-6 34 24"/><path d="M116 56l12-46M110 10h24"/><path d="M56 62l44 18"/><path d="M84 52l-10-38M68 14h14"/><rect x="138" y="20" width="20" height="14" rx="3"/></svg>'
+};
+const P=[
+ {c:'row',n:'AquaElite 10,1"',p:1299,t:'Premium',f:['Wasserwiderstand','10,1" Display','Klappbar']},
+ {c:'row',n:'WRX1000',p:999,t:'Premium',f:['Wasserwiderstand','LCD + LED-Feedback','Klappbar']},
+ {c:'row',n:'sRow Lite',p:799,t:'Mittelklasse',f:['Magnetbremse','24 Stufen','Klappbar & leise']},
+ {c:'row',n:'sRow',p:null,t:'Mittelklasse',f:['Leise Magnetbremse','360° Tablethalter','Sportstech Live App']},
+ {c:'row',n:'WRX500',p:null,t:'Mittelklasse',f:['Wasserwiderstand','Transportrollen','Launch 2026']},
+ {c:'row',n:'PROwer',p:279,t:'Einstieg',f:['32 Magnetstufen','LED-Knob','Vertikal verstaubar']},
+ {c:'bike',n:'sBike',p:1499,t:'Premium',f:['21,5" Touch-Display, drehbar','Magnetbremse, vollelektrisch','Kurse & Streaming']},
+ {c:'bike',n:'sBike 10,1"',p:null,t:'Premium',f:['10,1" Touch-Display','LED-Feedback','Launch 2026']},
+ {c:'bike',n:'sBike Lite',p:699,t:'Mittelklasse',f:['LED-Knob Display','16,5 kg Schwungmasse','Live App']},
+ {c:'bike',n:'SX500',p:null,t:'Mittelklasse',f:['Studio-Qualität','25 kg Schwungmasse','Bis 150 kg']},
+ {c:'bike',n:'SX200',p:399,t:'Einstieg',f:['22 kg Schwungrad','Riemenantrieb','Handpulssensoren']},
+ {c:'bike',n:'SX175',p:279,t:'Einstieg',f:['Magnetwiderstand','LED-Knob','Live App']},
+ {c:'cross',n:'sCross',p:1199,t:'Premium',f:['32 Stufen elektromagnetisch','Self-Generating','LED-Knob + Live App']},
+ {c:'cross',n:'CX700',p:869,t:'Mittelklasse',f:['24 Stufen, vollelektrisch','Magnetbremse','LED-Design']},
+ {c:'cross',n:'CX625',p:499,t:'Einstieg',f:['32 Widerstandsstufen','LCD-Display','Live App']},
+ {c:'cross',n:'CX608',p:349,t:'Einstieg',f:['8 Widerstandsstufen','LCD-Display','Live App']}
+];
+const grid=document.getElementById('products'),track=document.getElementById('track');
+const MIN=200,MAX=1600,pos=v=>((v-MIN)/(MAX-MIN))*100;
+[250,500,750,1000,1250,1500].forEach(v=>{const t=document.createElement('div');t.className='tick';t.style.left=pos(v)+'%';t.textContent=v.toLocaleString('de-DE')+' €';track.appendChild(t)});
+const priced=P.filter(x=>x.p).sort((a,b)=>a.p-b.p);
+const lanes=[];priced.forEach(x=>{let l=0;while(lanes[l]!==undefined&&pos(x.p)-lanes[l]<9)l++;lanes[l]=pos(x.p);x.lane=l});
+priced.forEach(x=>{const d=document.createElement('div');d.className='pin';d.dataset.c=x.c;d.style.left=pos(x.p)+'%';d.style.setProperty('--c',COL[x.c]);
+ d.innerHTML=`<em>${x.n}</em><div class="stem" style="height:${4+x.lane*26}px"></div><i></i>`;track.appendChild(d)});
+P.forEach(x=>{const d=document.createElement('div');d.className='prod';d.dataset.c=x.c;d.style.setProperty('--c',COL[x.c]);
+ d.innerHTML=`${ICON[x.c]}<div class="cat">${CATNAME[x.c]}</div><h3>${x.n}</h3><ul>${x.f.map(f=>`<li>${f}</li>`).join('')}</ul><span class="tier">${x.t}${x.p?' · ca. '+x.p.toLocaleString('de-DE')+' €':''}</span>`;grid.appendChild(d)});
+document.getElementById('tabs').onclick=e=>{const b=e.target.closest('button');if(!b)return;
+ document.querySelectorAll('#tabs button').forEach(x=>x.classList.toggle('on',x===b));const f=b.dataset.f;
+ grid.querySelectorAll('.prod').forEach(el=>el.style.display=(f==='all'||el.dataset.c===f)?'':'none');
+ track.querySelectorAll('.pin').forEach(el=>el.classList.toggle('dim',!(f==='all'||el.dataset.c===f)))};
+const cnt=document.getElementById('sCount');let started=false;
+new IntersectionObserver(es=>{if(es[0].isIntersecting&&!started){started=true;let i=0;cnt.textContent=0;const iv=setInterval(()=>{cnt.textContent=++i;if(i>=P.length)clearInterval(iv)},60)}}).observe(cnt);
+</script>
 </body>
 </html>
