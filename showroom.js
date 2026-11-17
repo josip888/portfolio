@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { OrbitControls } from './vendor/OrbitControls.js';
 
-const COL = { row: 0xd9ff5b, bike: 0x5bd0ff, cross: 0xff8a5b };
+const COL = { row: 0xa855f7, bike: 0xf472b6, cross: 0x818cf8 };
 const box = document.getElementById('showroom');
 const canvas = document.getElementById('showroom-canvas');
 
@@ -16,7 +16,7 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 
 const scene = new THREE.Scene();
-scene.fog = new THREE.Fog(0x0c0c0d, 7, 14);
+scene.fog = new THREE.Fog(0x0a0510, 7, 14);
 const camera = new THREE.PerspectiveCamera(38, 1, 0.1, 50);
 camera.position.set(4.4, 2.5, 4.4);
 
@@ -42,7 +42,7 @@ scene.add(rim);
 // Plattform
 const platform = new THREE.Mesh(
   new THREE.CylinderGeometry(2.1, 2.2, 0.08, 64),
-  new THREE.MeshStandardMaterial({ color: 0x141416, metalness: 0.4, roughness: 0.6 })
+  new THREE.MeshStandardMaterial({ color: 0x170d24, metalness: 0.4, roughness: 0.6 })
 );
 platform.position.y = -0.04;
 scene.add(platform);
@@ -68,14 +68,14 @@ const particles = new THREE.Points(pGeo, pMat);
 scene.add(particles);
 
 // Bausteine
-const dark = new THREE.MeshStandardMaterial({ color: 0x1d1d22, metalness: 0.7, roughness: 0.32 });
-const light = new THREE.MeshStandardMaterial({ color: 0x3a3a42, metalness: 0.5, roughness: 0.4 });
+const dark = new THREE.MeshStandardMaterial({ color: 0x221733, metalness: 0.8, roughness: 0.28 });
+const light = new THREE.MeshStandardMaterial({ color: 0x4a3a63, metalness: 0.6, roughness: 0.35 });
 const UP = new THREE.Vector3(0, 1, 0);
 
 function edges(mesh, color, thresh = 25) {
   const l = new THREE.LineSegments(
     new THREE.EdgesGeometry(mesh.geometry, thresh),
-    new THREE.LineBasicMaterial({ color, transparent: true, opacity: 0.85 })
+    new THREE.LineBasicMaterial({ color, transparent: true, opacity: 0.5 })
   );
   mesh.add(l);
   return mesh;

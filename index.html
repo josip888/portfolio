@@ -5,21 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Josip Miskovic – Product Manager</title>
 <meta name="description" content="Josip Miskovic – Product Manager aus Berlin. E-Commerce, Consumer Products und eigene App-Projekte.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#0c0c0d; --surface:#151517; --line:#26262a; --text:#f1f0ec; --muted:#9a9893;
-    --accent:#d9ff5b; --radius:18px;
+    --bg:#0a0510; --surface:#130b1d; --line:#2a1c3c; --text:#f5f0ff; --muted:#a597bd;
+    --accent:#a855f7; --accent2:#e9d5ff; --radius:18px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  body{background:var(--bg);overflow-x:hidden;color:var(--text);font-family:Satoshi,system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
   a{color:inherit}
   .wrap{max-width:960px;margin:0 auto;padding:0 24px}
 
-  nav{position:sticky;top:0;z-index:10;background:rgba(12,12,13,.8);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  nav{position:sticky;top:0;z-index:10;background:rgba(10,5,16,.75);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
   nav .wrap{display:flex;justify-content:space-between;align-items:center;height:64px}
   nav .logo{font-weight:700;letter-spacing:-.02em;text-decoration:none}
   nav ul{display:flex;gap:28px;list-style:none;font-size:14px}
@@ -28,13 +26,14 @@
 
   .tag{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:6px 14px;margin-bottom:28px}
   .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent)}
+  h1,h2,h3,.logo,.stat b,.sr-label b{font-family:'Clash Display',Satoshi,sans-serif}
   h1{font-size:clamp(40px,5.4vw,64px);line-height:1.05;letter-spacing:-.035em;font-weight:600}
-  h1 em{font-family:"Instrument Serif",serif;font-weight:400;font-style:italic;color:var(--accent)}
+  h1 em{font-style:normal;background:linear-gradient(100deg,#c084fc,#a855f7 40%,#f0abfc);-webkit-background-clip:text;background-clip:text;color:transparent}
   header p{max-width:560px;margin-top:24px;font-size:18px;color:var(--muted)}
   .cta{display:flex;gap:12px;margin-top:36px;flex-wrap:wrap}
   .btn{display:inline-block;padding:13px 22px;border-radius:99px;font-weight:600;font-size:15px;text-decoration:none;transition:transform .15s}
   .btn:hover{transform:translateY(-2px)}
-  .btn.primary{background:var(--accent);color:#0c0c0d}
+  .btn.primary{background:linear-gradient(135deg,#a855f7,#7c3aed);color:#fff;box-shadow:0 8px 30px rgba(168,85,247,.35)}
   .btn.ghost{border:1px solid var(--line)}
 
   section{padding:80px 0;border-top:1px solid var(--line)}
@@ -71,9 +70,13 @@
 
 
 
+  header{position:relative}
+  header::before{content:'';position:absolute;width:720px;height:720px;right:-200px;top:-260px;background:radial-gradient(circle,rgba(168,85,247,.28),transparent 65%);pointer-events:none;z-index:-1}
+  header::after{content:'';position:absolute;width:520px;height:520px;left:-220px;bottom:-200px;background:radial-gradient(circle,rgba(236,72,153,.14),transparent 65%);pointer-events:none;z-index:-1}
+  body::after{content:'';position:fixed;inset:0;pointer-events:none;opacity:.06;z-index:100;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
   .hero{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center}
   header{padding:72px 0 80px}
-  .showroom{position:relative;height:520px;border-radius:28px;border:1px solid var(--line);background:radial-gradient(ellipse at 50% 70%,#1a1a1e 0%,#0c0c0d 70%);overflow:hidden}
+  .showroom{position:relative;height:520px;border-radius:28px;border:1px solid var(--line);background:radial-gradient(ellipse at 50% 75%,#2a1145 0%,#120a1c 55%,#0a0510 100%);overflow:hidden}
   .showroom canvas{position:absolute;inset:0;width:100%;height:100%;cursor:grab;touch-action:pan-y}
   .showroom canvas:active{cursor:grabbing}
   .showroom.no3d canvas{display:none}
@@ -94,13 +97,13 @@
   .stat span{font-size:14px;color:var(--muted)}
   .tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}
   .tabs button{font:inherit;font-size:14px;padding:9px 16px;border-radius:99px;border:1px solid var(--line);background:none;color:var(--muted);cursor:pointer;transition:all .2s}
-  .tabs button.on{background:var(--accent);color:#0c0c0d;border-color:var(--accent);font-weight:600}
+  .tabs button.on{background:var(--accent);color:#fff;border-color:var(--accent);font-weight:600}
   .ladder{padding:28px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);margin-bottom:24px}
   .ladder h4{font-size:15px;margin-bottom:4px}
   .ladder small{color:var(--muted);font-size:13px}
   .scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
   .track{min-width:620px;position:relative;height:150px;margin:24px 8px 8px}
-  .axis{position:absolute;left:0;right:0;bottom:24px;height:2px;background:linear-gradient(90deg,#2b2b30,var(--accent))}
+  .axis{position:absolute;left:0;right:0;bottom:24px;height:2px;background:linear-gradient(90deg,#2a1c3c,var(--accent))}
   .tick{position:absolute;bottom:0;font-size:12px;color:var(--muted);transform:translateX(-50%)}
   .pin{position:absolute;bottom:26px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;transition:opacity .3s}
   .pin i{width:12px;height:12px;border-radius:50%;background:var(--c);box-shadow:0 0 10px var(--c);margin-top:4px}
@@ -112,13 +115,16 @@
   .products{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
   .prod{padding:22px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);transition:transform .2s,border-color .2s}
   .prod:hover{transform:translateY(-3px);border-color:var(--c)}
-  .prod svg{width:100%;height:92px;margin-bottom:14px;color:var(--c)}
+  .prod{position:relative;overflow:hidden}
+  .prod::before{content:'';position:absolute;width:180px;height:180px;right:-70px;top:-70px;border-radius:50%;background:radial-gradient(circle,var(--c),transparent 70%);opacity:.18;transition:opacity .3s}
+  .prod:hover::before{opacity:.4}
+  .prod h3{font-size:24px!important;letter-spacing:-.01em}
   .prod .cat{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--c)}
   .prod h3{font-size:18px;margin:2px 0 10px}
   .prod ul{list-style:none;display:grid;gap:4px;font-size:13px;color:var(--muted)}
   .prod ul li::before{content:"– "}
   .tier{display:inline-block;margin-top:14px;font-size:11px;padding:3px 9px;border-radius:99px;border:1px solid var(--line);color:var(--muted)}
-  @media(max-width:640px){.stats{grid-template-columns:1fr}.stat b{font-size:32px}.products{grid-template-columns:1fr 1fr;gap:10px}.prod{padding:16px}.prod svg{height:64px}.prod h3{font-size:16px}}
+  @media(max-width:640px){.stats{grid-template-columns:1fr}.stat b{font-size:32px}.products{grid-template-columns:1fr 1fr;gap:10px}.prod{padding:16px}.prod h3{font-size:16px}}
 
   @media(max-width:640px){
     nav ul{display:none}
@@ -232,9 +238,9 @@
       <small>Jeder Punkt ist ein Produkt, platziert nach ungefährer UVP</small>
       <div class="scroll"><div class="track" id="track"><div class="axis"></div></div></div>
       <div class="legend">
-        <span style="--c:#d9ff5b">Rudergeräte</span>
-        <span style="--c:#5bd0ff">Speedbikes</span>
-        <span style="--c:#ff8a5b">Crosstrainer</span>
+        <span style="--c:#a855f7">Rudergeräte</span>
+        <span style="--c:#f472b6">Speedbikes</span>
+        <span style="--c:#818cf8">Crosstrainer</span>
       </div>
     </div>
 
@@ -309,13 +315,9 @@
 
 
 <script>
-const COL={row:'#d9ff5b',bike:'#5bd0ff',cross:'#ff8a5b'};
+const COL={row:'#a855f7',bike:'#f472b6',cross:'#818cf8'};
 const CATNAME={row:'Rudergerät',bike:'Speedbike',cross:'Crosstrainer'};
-const ICON={
- row:'<svg viewBox="0 0 200 90" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M18 70h150"/><path d="M30 70l10-14h120l8 14"/><circle cx="38" cy="46" r="14"/><path d="M52 46l40-10"/><rect x="96" y="44" width="24" height="8" rx="3"/><path d="M150 56l10-22"/><path d="M155 34h14"/><path d="M24 80h12M150 80h12"/></svg>',
- bike:'<svg viewBox="0 0 200 90" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="62" cy="58" r="20"/><circle cx="62" cy="58" r="5"/><path d="M62 58l38-30 26 32"/><path d="M100 28l-6-12M86 16h18"/><path d="M126 60l14-34h16"/><path d="M40 80h50M110 80h50"/><path d="M62 78v2M136 60v20"/></svg>',
- cross:'<svg viewBox="0 0 200 90" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M30 80h140"/><circle cx="56" cy="62" r="14"/><path d="M56 62l60-6 34 24"/><path d="M116 56l12-46M110 10h24"/><path d="M56 62l44 18"/><path d="M84 52l-10-38M68 14h14"/><rect x="138" y="20" width="20" height="14" rx="3"/></svg>'
-};
+
 const P=[
  {c:'row',n:'AquaElite 10,1"',p:1299,t:'Premium',f:['Wasserwiderstand','10,1" Display','Klappbar']},
  {c:'row',n:'WRX1000',p:999,t:'Premium',f:['Wasserwiderstand','LCD + LED-Feedback','Klappbar']},
@@ -342,7 +344,7 @@ const lanes=[];priced.forEach(x=>{let l=0;while(lanes[l]!==undefined&&pos(x.p)-l
 priced.forEach(x=>{const d=document.createElement('div');d.className='pin';d.dataset.c=x.c;d.style.left=pos(x.p)+'%';d.style.setProperty('--c',COL[x.c]);
  d.innerHTML=`<em>${x.n}</em><div class="stem" style="height:${4+x.lane*26}px"></div><i></i>`;track.appendChild(d)});
 P.forEach(x=>{const d=document.createElement('div');d.className='prod';d.dataset.c=x.c;d.style.setProperty('--c',COL[x.c]);
- d.innerHTML=`${ICON[x.c]}<div class="cat">${CATNAME[x.c]}</div><h3>${x.n}</h3><ul>${x.f.map(f=>`<li>${f}</li>`).join('')}</ul><span class="tier">${x.t}${x.p?' · ca. '+x.p.toLocaleString('de-DE')+' €':''}</span>`;grid.appendChild(d)});
+ d.innerHTML=`<div class="cat">${CATNAME[x.c]}</div><h3>${x.n}</h3><ul>${x.f.map(f=>`<li>${f}</li>`).join('')}</ul><span class="tier">${x.t}${x.p?' · ca. '+x.p.toLocaleString('de-DE')+' €':''}</span>`;grid.appendChild(d)});
 document.getElementById('tabs').onclick=e=>{const b=e.target.closest('button');if(!b)return;
  document.querySelectorAll('#tabs button').forEach(x=>x.classList.toggle('on',x===b));const f=b.dataset.f;if(e.isTrusted&&window.showroomSet)window.showroomSet(f);
  grid.querySelectorAll('.prod').forEach(el=>el.style.display=(f==='all'||el.dataset.c===f)?'':'none');
