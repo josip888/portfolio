@@ -26,10 +26,9 @@
   nav ul a{text-decoration:none;color:var(--muted);transition:color .2s}
   nav ul a:hover{color:var(--text)}
 
-  header{padding:120px 0 96px}
   .tag{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:6px 14px;margin-bottom:28px}
   .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent)}
-  h1{font-size:clamp(42px,7vw,76px);line-height:1.05;letter-spacing:-.035em;font-weight:600}
+  h1{font-size:clamp(40px,5.4vw,64px);line-height:1.05;letter-spacing:-.035em;font-weight:600}
   h1 em{font-family:"Instrument Serif",serif;font-weight:400;font-style:italic;color:var(--accent)}
   header p{max-width:560px;margin-top:24px;font-size:18px;color:var(--muted)}
   .cta{display:flex;gap:12px;margin-top:36px;flex-wrap:wrap}
@@ -71,6 +70,23 @@
   footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 
 
+
+  .hero{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center}
+  header{padding:72px 0 80px}
+  .showroom{position:relative;height:520px;border-radius:28px;border:1px solid var(--line);background:radial-gradient(ellipse at 50% 70%,#1a1a1e 0%,#0c0c0d 70%);overflow:hidden}
+  .showroom canvas{position:absolute;inset:0;width:100%;height:100%;cursor:grab;touch-action:pan-y}
+  .showroom canvas:active{cursor:grabbing}
+  .showroom.no3d canvas{display:none}
+  .sr-label{position:absolute;left:22px;top:20px;pointer-events:none}
+  .sr-label b{display:block;font-size:22px;letter-spacing:-.02em;color:var(--c,var(--accent));transition:color .3s}
+  .sr-label span{font-size:13px;color:var(--muted)}
+  .sr-hint{position:absolute;right:20px;top:24px;font-size:12px;color:var(--muted);pointer-events:none}
+  .sr-switch{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);display:flex;gap:6px;padding:5px;border-radius:99px;background:rgba(20,20,22,.85);border:1px solid var(--line);backdrop-filter:blur(8px)}
+  .sr-switch button{font:inherit;font-size:13px;padding:8px 14px;border-radius:99px;border:0;background:none;color:var(--muted);cursor:pointer;white-space:nowrap}
+  .sr-switch button.on{background:var(--text);color:#0c0c0d;font-weight:600}
+  @media(max-width:900px){.hero{grid-template-columns:1fr}.showroom{height:420px}}
+  @media(max-width:640px){.sr-switch button{padding:7px 10px;font-size:12px}.showroom{height:380px}}
+
   /* Sortiment */
   .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:8px 0 40px}
   .stat{padding:24px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius)}
@@ -106,10 +122,11 @@
 
   @media(max-width:640px){
     nav ul{display:none}
-    header{padding:80px 0 64px}
+    header{padding:48px 0 56px}
     .job{grid-template-columns:1fr;gap:6px}
   }
 </style>
+<script type="importmap">{"imports":{"three":"./vendor/three.module.min.js"}}</script>
 </head>
 <body>
 
@@ -127,13 +144,25 @@
 </nav>
 
 <header>
-  <div class="wrap">
-    <span class="tag"><span class="dot"></span>Offen für neue Rollen · Berlin</span>
-    <h1>Product Manager,<br>der Produkte <em>auch selbst baut.</em></h1>
-    <p>Drei Jahre Product Management im E-Commerce bei Sportstech, davor die Ausbildung im selben Haus. Nebenbei entwickle ich eigene Apps und Games, gemeinsam mit KI.</p>
-    <div class="cta">
-      <a class="btn primary" href="#contact">Kontakt aufnehmen</a>
-      <a class="btn ghost" href="#projects">Projekte ansehen</a>
+  <div class="wrap hero">
+    <div>
+      <span class="tag"><span class="dot"></span>Offen für neue Rollen · Berlin</span>
+      <h1>Product Manager,<br>der Produkte <em>auch selbst baut.</em></h1>
+      <p>Drei Jahre Product Management bei Sportstech: verantwortlich für alle Rudergeräte, Speedbikes und Crosstrainer. Nebenbei entwickle ich eigene Apps und Games, gemeinsam mit KI.</p>
+      <div class="cta">
+        <a class="btn primary" href="#sortiment">Mein Sortiment</a>
+        <a class="btn ghost" href="#contact">Kontakt</a>
+      </div>
+    </div>
+    <div class="showroom" id="showroom">
+      <canvas id="showroom-canvas"></canvas>
+      <div class="sr-label" id="showroom-label"></div>
+      <div class="sr-hint">Ziehen zum Drehen</div>
+      <div class="sr-switch">
+        <button data-show="row">Rudergeräte</button>
+        <button data-show="bike">Speedbikes</button>
+        <button data-show="cross">Crosstrainer</button>
+      </div>
     </div>
   </div>
 </header>
@@ -315,11 +344,12 @@ priced.forEach(x=>{const d=document.createElement('div');d.className='pin';d.dat
 P.forEach(x=>{const d=document.createElement('div');d.className='prod';d.dataset.c=x.c;d.style.setProperty('--c',COL[x.c]);
  d.innerHTML=`${ICON[x.c]}<div class="cat">${CATNAME[x.c]}</div><h3>${x.n}</h3><ul>${x.f.map(f=>`<li>${f}</li>`).join('')}</ul><span class="tier">${x.t}${x.p?' · ca. '+x.p.toLocaleString('de-DE')+' €':''}</span>`;grid.appendChild(d)});
 document.getElementById('tabs').onclick=e=>{const b=e.target.closest('button');if(!b)return;
- document.querySelectorAll('#tabs button').forEach(x=>x.classList.toggle('on',x===b));const f=b.dataset.f;
+ document.querySelectorAll('#tabs button').forEach(x=>x.classList.toggle('on',x===b));const f=b.dataset.f;if(e.isTrusted&&window.showroomSet)window.showroomSet(f);
  grid.querySelectorAll('.prod').forEach(el=>el.style.display=(f==='all'||el.dataset.c===f)?'':'none');
  track.querySelectorAll('.pin').forEach(el=>el.classList.toggle('dim',!(f==='all'||el.dataset.c===f)))};
 const cnt=document.getElementById('sCount');let started=false;
 new IntersectionObserver(es=>{if(es[0].isIntersecting&&!started){started=true;let i=0;cnt.textContent=0;const iv=setInterval(()=>{cnt.textContent=++i;if(i>=P.length)clearInterval(iv)},60)}}).observe(cnt);
 </script>
+<script type="module" src="./showroom.js"></script>
 </body>
 </html>
