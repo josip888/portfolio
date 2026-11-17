@@ -6,6 +6,27 @@
 <title>Josip Miskovic – Product Manager</title>
 <meta name="description" content="Josip Miskovic – Product Manager für Sport- und Fitnessgeräte aus Berlin. Verantwortete bei Sportstech alle Rudergeräte, Speedbikes und Crosstrainer, von der Idee über Lieferanten und Produktion bis zur Markteinführung.">
 <meta name="theme-color" content="#08090a">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://josip888.github.io/portfolio/">
+<link rel="alternate" hreflang="de" href="https://josip888.github.io/portfolio/">
+<link rel="alternate" hreflang="en" href="https://josip888.github.io/portfolio/en/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Josip Miskovic">
+<meta property="og:url" content="https://josip888.github.io/portfolio/">
+<meta property="og:title" content="Josip Miskovic – Product Manager · Sport & Fitness">
+<meta property="og:description" content="16 Rudergeräte, Speedbikes und Crosstrainer bei Sportstech verantwortet, von der Idee über Lieferanten und Produktion bis zur Markteinführung.">
+<meta property="og:image" content="https://josip888.github.io/portfolio/assets/og-de.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Josip Miskovic, Product Manager für Sport und Fitness">
+<meta property="og:locale" content="de_DE">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Josip Miskovic – Product Manager · Sport & Fitness">
+<meta name="twitter:description" content="16 Rudergeräte, Speedbikes und Crosstrainer bei Sportstech verantwortet, von der Idee bis zur Markteinführung.">
+<meta name="twitter:image" content="https://josip888.github.io/portfolio/assets/og-de.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet">
@@ -53,13 +74,17 @@
   /* Navigation */
   nav{position:fixed;top:0;left:0;width:100%;z-index:100;height:64px;background-image:linear-gradient(rgba(11,11,11,.8),rgba(20,20,20,.76));border-bottom:1px solid var(--edge);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
   nav .wide{display:flex;align-items:center;justify-content:space-between;height:100%}
-  .brand{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:510}
+  .brand{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:510;white-space:nowrap}
   .brand svg{width:20px;height:20px}
   .navr{display:flex;align-items:center;gap:6px}
   .navr ul{display:flex;list-style:none}
   .navr ul a{display:block;padding:0 12px;font-size:13px;line-height:32px;color:var(--muted);transition:color .16s}
   .navr ul a:hover{color:var(--heading)}
   .sep{width:1px;height:16px;background:var(--rule);margin:0 10px}
+  .lang{display:inline-flex;gap:2px;padding:2px;border-radius:9999px;background:rgba(255,255,255,.04);box-shadow:rgba(255,255,255,.06) 0 0 0 1px inset;margin-right:8px}
+  .lang a{font-size:12px;font-weight:510;line-height:24px;padding:0 9px;border-radius:9999px;color:var(--muted);transition:color .16s,background .16s}
+  .lang a:hover{color:var(--heading)}
+  .lang a.on{background:rgba(255,255,255,.1);color:var(--heading)}
   .progress{position:absolute;left:0;bottom:-1px;height:1px;width:100%;background:var(--heading);transform-origin:0 50%;transform:scaleX(0);opacity:.6}
 
   /* Hero: 3D-Ring */
@@ -252,6 +277,7 @@
   }
   @media(max-width:767px){
     nav{height:56px}
+    .lang{margin-right:0}
     .in,.pair>div,.about>div,.pgrid>div,.skills>div,.lfacts>div,.ltop,.proofline,.cv .row{padding-left:0;padding-right:0}
     .hcopy h1{font-size:40px}
     .hcopy .support{flex-direction:column;align-items:flex-start;gap:12px}
@@ -286,6 +312,9 @@
     .sheet .content{padding:8px 20px 32px}
     .sheet h3{font-size:36px}
   }
+  @media(max-width:520px){
+    .navr .btn-sm{display:none}
+  }
 </style>
 </head>
 <body>
@@ -299,19 +328,20 @@
   </defs>
 </svg>
 
-<nav id="nav" aria-label="Hauptnavigation">
+<nav id="nav" aria-label="Hauptnavigation" data-en-aria-label="Main navigation">
   <div class="wide">
     <a class="brand" href="#"><svg><use href="#mark"/></svg>Josip Miskovic</a>
     <div class="navr">
       <ul>
-        <li><a href="#ueber-mich">Über mich</a></li>
+        <li><a href="#ueber-mich" data-en="About">Über mich</a></li>
         <li><a href="#lineup">Lineup</a></li>
-        <li><a href="#lieferanten">Lieferanten</a></li>
-        <li><a href="#werdegang">Werdegang</a></li>
-        <li><a href="#projekte">Projekte</a></li>
+        <li><a href="#lieferanten" data-en="Suppliers">Lieferanten</a></li>
+        <li><a href="#werdegang" data-en="Experience">Werdegang</a></li>
+        <li><a href="#projekte" data-en="Projects">Projekte</a></li>
       </ul>
       <span class="sep"></span>
-      <a class="btn btn-primary btn-sm" href="#kontakt">Kontakt aufnehmen</a>
+      <div class="lang" role="group" aria-label="Sprache / Language"><a href="./" data-lang="de" hreflang="de" lang="de" class="on">DE</a><a href="./en/" data-lang="en" hreflang="en" lang="en">EN</a></div>
+      <a class="btn btn-primary btn-sm" href="#kontakt" data-en="Get in touch">Kontakt aufnehmen</a>
     </div>
   </div>
   <i class="progress" id="progress"></i>
@@ -323,20 +353,20 @@
     <div class="hcopy" id="hcopy">
       <div class="wide"><div class="in">
         <div class="eyebrow">Josip Miskovic · Product Manager · Sport & Fitness</div>
-        <h1>Produkte,<br>die man spürt.</h1>
+        <h1 data-en="Products&lt;br&gt;you can feel.">Produkte,<br>die man spürt.</h1>
         <div class="support">
-          <p>Drei Jahre bei Sportstech verantwortlich für alle Rudergeräte, Speedbikes und Crosstrainer. 16 Produkte vom Einstieg bis zum Smart-Gerät.</p>
-          <a class="tlink" href="#lineup">Das Lineup ansehen <svg><use href="#arrow"/></svg></a>
+          <p data-en="Three years at Sportstech owning every rowing machine, indoor bike and cross trainer. 16 products, from entry-level models to smart equipment.">Drei Jahre bei Sportstech verantwortlich für alle Rudergeräte, Speedbikes und Crosstrainer. 16 Produkte vom Einstieg bis zum Smart-Gerät.</p>
+          <a class="tlink" href="#lineup" data-en="See the lineup &lt;svg&gt;&lt;use href=&quot;#arrow&quot;/&gt;&lt;/svg&gt;">Das Lineup ansehen <svg><use href="#arrow"/></svg></a>
         </div>
       </div></div>
     </div>
     <div class="hcopy2" id="hcopy2">
       <div class="wide"><div class="in">
-        <h2 class="h2">Ein Sortiment. <span class="muted">Drei Welten.</span></h2>
-        <p>16 Produkte in drei Kategorien: Rudergeräte, Speedbikes, Crosstrainer. Mit drei Widerstandssystemen: Wasser, Magnet und Luft.</p>
+        <h2 class="h2" data-en="One range. &lt;span class=&quot;muted&quot;&gt;Three worlds.&lt;/span&gt;">Ein Sortiment. <span class="muted">Drei Welten.</span></h2>
+        <p data-en="16 products in three categories: rowing machines, indoor bikes and cross trainers. With three resistance systems: water, magnetic and air.">16 Produkte in drei Kategorien: Rudergeräte, Speedbikes, Crosstrainer. Mit drei Widerstandssystemen: Wasser, Magnet und Luft.</p>
       </div></div>
     </div>
-    <div class="hint" id="hint"><i></i>Scrollen</div>
+    <div class="hint" id="hint" data-en="&lt;i&gt;&lt;/i&gt;Scroll"><i></i>Scrollen</div>
   </div>
 </header>
 
@@ -345,19 +375,19 @@
     <div class="about">
       <div>
         <figure class="portrait s3d" data-turn="1">
-          <img src="assets/josip.jpg" alt="Porträt von Josip Miskovic" loading="lazy" width="1000" height="1333">
-          <figcaption>Josip Miskovic · Berlin</figcaption>
+          <img src="assets/josip.jpg" alt="Porträt von Josip Miskovic" data-en-alt="Portrait of Josip Miskovic" loading="lazy" width="1000" height="1333">
+          <figcaption data-en="Josip Miskovic · Berlin">Josip Miskovic · Berlin</figcaption>
         </figure>
       </div>
       <div class="s3d">
-        <div class="eyebrow">Über mich</div>
-        <h2 class="h2">Vom Kunden aus gedacht.<br><span class="muted">Mit Partnern gebaut.</span></h2>
-        <p class="lead">Ich bin Josip, Product Manager aus Berlin. In über sechs Jahren bei Sportstech habe ich Fitnessgeräte von allen Seiten kennengelernt: im Kundenservice, im E-Commerce und schließlich im Produktmanagement.</p>
-        <p class="body">Mich interessiert, wie sich ein Gerät im Training anfühlt, und was es braucht, damit es genau so beim Kunden ankommt: gutes Design, verlässliche Liefer- und Produktionspartner, gründliche Prüfung und ein Preis, der passt. Im Team habe ich außerdem Werkstudenten im Produktmanagement angeleitet.</p>
+        <div class="eyebrow" data-en="About">Über mich</div>
+        <h2 class="h2" data-en="Designed around the customer.&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;Built with partners.&lt;/span&gt;">Vom Kunden aus gedacht.<br><span class="muted">Mit Partnern gebaut.</span></h2>
+        <p class="lead" data-en="I’m Josip, a product manager based in Berlin. In more than six years at Sportstech I got to know fitness equipment from every angle: in customer service, in e-commerce and finally in product management.">Ich bin Josip, Product Manager aus Berlin. In über sechs Jahren bei Sportstech habe ich Fitnessgeräte von allen Seiten kennengelernt: im Kundenservice, im E-Commerce und schließlich im Produktmanagement.</p>
+        <p class="body" data-en="I care about how a machine feels during a workout, and what it takes for it to reach the customer exactly that way: good design, reliable suppliers and manufacturing partners, thorough testing and the right price. I also led working students in the product management team.">Mich interessiert, wie sich ein Gerät im Training anfühlt, und was es braucht, damit es genau so beim Kunden ankommt: gutes Design, verlässliche Liefer- und Produktionspartner, gründliche Prüfung und ein Preis, der passt. Im Team habe ich außerdem Werkstudenten im Produktmanagement angeleitet.</p>
         <div class="facts">
-          <div><small>Standort</small>Berlin</div>
+          <div><small data-en="Location">Standort</small>Berlin</div>
           <div><small>Sportstech</small>2020 – 2026</div>
-          <div><small>Schwerpunkt</small>Cardio-Fitnessgeräte</div>
+          <div><small data-en="Focus">Schwerpunkt</small><span data-en="Cardio fitness equipment">Cardio-Fitnessgeräte</span></div>
         </div>
       </div>
     </div>
@@ -368,22 +398,22 @@
   <div class="wide">
     <div class="pair s3d">
       <div>
-        <div class="eyebrow">Mein Sortiment bei Sportstech</div>
-        <h2 class="h2">Das Lineup.</h2>
+        <div class="eyebrow" data-en="My range at Sportstech">Mein Sortiment bei Sportstech</div>
+        <h2 class="h2" data-en="The lineup.">Das Lineup.</h2>
       </div>
-      <div><p class="lead">Jedes dieser Geräte habe ich als Product Manager verantwortet. Tippe auf eines, um es dir genauer anzusehen.</p></div>
+      <div><p class="lead" data-en="I owned every one of these products as product manager. Tap one to take a closer look.">Jedes dieser Geräte habe ich als Product Manager verantwortet. Tippe auf eines, um es dir genauer anzusehen.</p></div>
     </div>
     <div class="ltop s3d">
       <div class="tabs" id="seg" role="tablist">
         <span class="thumb" id="thumb"></span>
-        <button class="on" data-f="all" role="tab">Alle</button>
-        <button data-f="row" role="tab">Rudergeräte</button>
-        <button data-f="bike" role="tab">Speedbikes</button>
-        <button data-f="cross" role="tab">Crosstrainer</button>
+        <button class="on" data-f="all" role="tab" data-en="All">Alle</button>
+        <button data-f="row" role="tab" data-en="Rowing machines">Rudergeräte</button>
+        <button data-f="bike" role="tab" data-en="Indoor bikes">Speedbikes</button>
+        <button data-f="cross" role="tab" data-en="Cross trainers">Crosstrainer</button>
       </div>
       <div class="arrows">
-        <button id="prev" aria-label="Zurück"><svg style="transform:scaleX(-1)"><use href="#arrow"/></svg></button>
-        <button id="next" aria-label="Weiter"><svg><use href="#arrow"/></svg></button>
+        <button id="prev" aria-label="Zurück" data-en-aria-label="Previous"><svg style="transform:scaleX(-1)"><use href="#arrow"/></svg></button>
+        <button id="next" aria-label="Weiter" data-en-aria-label="Next"><svg><use href="#arrow"/></svg></button>
       </div>
     </div>
   </div>
@@ -392,13 +422,13 @@
     <div class="lfacts s3d">
       <div>
         <div class="k">Premium</div>
-        <h3>Bis 21,5" Touchdisplay</h3>
-        <p>Smart-Geräte mit drehbarem Screen und Trainer-Workouts: sBike, sRow, Aqua Elite.</p>
+        <h3 data-en="Up to a 21.5&quot; touchscreen">Bis 21,5" Touchdisplay</h3>
+        <p data-en="Smart equipment with a rotating screen and coached workouts: sBike, sRow, Aqua Elite.">Smart-Geräte mit drehbarem Screen und Trainer-Workouts: sBike, sRow, Aqua Elite.</p>
       </div>
       <div>
-        <div class="k">Ohne Steckdose</div>
-        <h3>Strom? Brauchen manche nicht.</h3>
-        <p>Der sCross erzeugt seinen Strom selbst, der PROwer Lite läuft mit Batterie.</p>
+        <div class="k" data-en="No power outlet">Ohne Steckdose</div>
+        <h3 data-en="Power? Some don’t need it.">Strom? Brauchen manche nicht.</h3>
+        <p data-en="The sCross generates its own power, the PROwer Lite runs on batteries.">Der sCross erzeugt seinen Strom selbst, der PROwer Lite läuft mit Batterie.</p>
       </div>
     </div>
   </div>
@@ -409,9 +439,9 @@
     <div class="wide" style="width:100%">
       <div class="pgrid">
         <div>
-          <div class="eyebrow">Lieferanten & Produktion</div>
-          <h2 class="h2">Von der Idee<br>bis ins Wohnzimmer.</h2>
-          <p class="lead">Ein Fitnessgerät entsteht nicht am Schreibtisch. Ich habe neue Produkte vom ersten Gedanken über den Produktionsstart bis zur Markteinführung begleitet, gemeinsam mit Designern, Lieferanten, Produktionspartnern und Prüfinstituten.</p>
+          <div class="eyebrow" data-en="Suppliers &amp; manufacturing">Lieferanten & Produktion</div>
+          <h2 class="h2" data-en="From first idea&lt;br&gt;to the living room.">Von der Idee<br>bis ins Wohnzimmer.</h2>
+          <p class="lead" data-en="Fitness equipment isn’t made at a desk. I took new products from the first idea through the start of production to market launch, together with designers, suppliers, manufacturing partners and testing institutes.">Ein Fitnessgerät entsteht nicht am Schreibtisch. Ich habe neue Produkte vom ersten Gedanken über den Produktionsstart bis zur Markteinführung begleitet, gemeinsam mit Designern, Lieferanten, Produktionspartnern und Prüfinstituten.</p>
           <ol class="steps" id="steps"></ol>
         </div>
         <div><div class="deck" id="deck"></div></div>
@@ -423,15 +453,15 @@
 <section class="chapter" id="werdegang">
   <div class="wide">
     <div class="in s3d">
-      <div class="eyebrow">Werdegang</div>
-      <h2 class="h2">Vom Kundenservice<br>ins Product Management.</h2>
+      <div class="eyebrow" data-en="Experience">Werdegang</div>
+      <h2 class="h2" data-en="From customer service&lt;br&gt;to product management.">Vom Kundenservice<br>ins Product Management.</h2>
     </div>
     <div class="cv">
-      <div class="row s3d"><div class="when">07/2023 – 08/2026</div><div><div class="t15">Product Manager</div><div class="org">Sportstech Brands Holding GmbH · Berlin</div></div><p>Verantwortlich für das komplette Sortiment an Rudergeräten, Speedbikes und Crosstrainern, vom Einstiegsmodell bis zum Smart-Gerät mit 21,5" Touchdisplay. Neue Produkte von der Idee bis zur Markteinführung, Prototypen und Muster, Lieferanten und Produktion, Budget und Timing, Preise sowie die Anleitung von Werkstudenten.</p></div>
-      <div class="row s3d"><div class="when">08/2021 – 07/2023</div><div><div class="t15">Ausbildung Kaufmann im E-Commerce</div><div class="org">Sportstech Brands Holding GmbH · Berlin</div></div><p>Onlinehandel, Marktplätze, Produktdaten und Kampagnen, bevor es direkt ins Product Management ging.</p></div>
-      <div class="row s3d"><div class="when">02/2021 – 07/2021</div><div><div class="t15">Verkäufer und Kundenberater</div><div class="org">Customer Success Management · Sportstech</div></div><p>Beratung und Betreuung von Kunden, aktiver Verkauf, Anfragen und Bestellungen. Hier habe ich gelernt, was Kunden an einem Gerät wirklich wichtig ist.</p></div>
-      <div class="row s3d"><div class="when">02/2020 – 01/2021</div><div><div class="t15">Werkstudent</div><div class="org">Sportstech · Berlin</div></div><p>Der Einstieg bei Sportstech, parallel zum Studium.</p></div>
-      <div class="row s3d"><div class="when">2019 – 2020</div><div><div class="t15">Studium Wirtschaftsinformatik</div><div class="org">TH Wildau</div></div><p>Grundlagen in Informatik, BWL und Prozessen.</p></div>
+      <div class="row s3d"><div class="when">07/2023 – 08/2026</div><div><div class="t15">Product Manager</div><div class="org">Sportstech Brands Holding GmbH · Berlin</div></div><p data-en="Owned the full range of rowing machines, indoor bikes and cross trainers, from entry-level models to smart equipment with a 21.5&quot; touchscreen. New products from idea to market launch, prototypes and samples, suppliers and manufacturing, budget and timing, pricing, and leading working students.">Verantwortlich für das komplette Sortiment an Rudergeräten, Speedbikes und Crosstrainern, vom Einstiegsmodell bis zum Smart-Gerät mit 21,5" Touchdisplay. Neue Produkte von der Idee bis zur Markteinführung, Prototypen und Muster, Lieferanten und Produktion, Budget und Timing, Preise sowie die Anleitung von Werkstudenten.</p></div>
+      <div class="row s3d"><div class="when">08/2021 – 07/2023</div><div><div class="t15" data-en="Apprenticeship, E-Commerce Management">Ausbildung Kaufmann im E-Commerce</div><div class="org">Sportstech Brands Holding GmbH · Berlin</div></div><p data-en="Online retail, marketplaces, product data and campaigns, before moving straight into product management.">Onlinehandel, Marktplätze, Produktdaten und Kampagnen, bevor es direkt ins Product Management ging.</p></div>
+      <div class="row s3d"><div class="when">02/2021 – 07/2021</div><div><div class="t15" data-en="Sales &amp; Customer Advisor">Verkäufer und Kundenberater</div><div class="org">Customer Success Management · Sportstech</div></div><p data-en="Advising and supporting customers, active sales, inquiries and orders. This is where I learned what customers really care about in a product.">Beratung und Betreuung von Kunden, aktiver Verkauf, Anfragen und Bestellungen. Hier habe ich gelernt, was Kunden an einem Gerät wirklich wichtig ist.</p></div>
+      <div class="row s3d"><div class="when">02/2020 – 01/2021</div><div><div class="t15" data-en="Working student">Werkstudent</div><div class="org">Sportstech · Berlin</div></div><p data-en="My start at Sportstech, alongside my studies.">Der Einstieg bei Sportstech, parallel zum Studium.</p></div>
+      <div class="row s3d"><div class="when">2019 – 2020</div><div><div class="t15" data-en="Business Informatics studies">Studium Wirtschaftsinformatik</div><div class="org">TH Wildau</div></div><p data-en="Foundations in computer science, business administration and processes.">Grundlagen in Informatik, BWL und Prozessen.</p></div>
     </div>
   </div>
 </section>
@@ -440,24 +470,24 @@
   <div class="wide">
     <div class="pair s3d">
       <div>
-        <div class="eyebrow">Stimmen</div>
-        <h2 class="h2">Aus meinem<br>Arbeitszeugnis.</h2>
+        <div class="eyebrow" data-en="References">Stimmen</div>
+        <h2 class="h2" data-en="From my&lt;br&gt;employer reference.">Aus meinem<br>Arbeitszeugnis.</h2>
       </div>
-      <div><p class="lead">Was Sportstech zum Abschluss über meine Arbeit und die Zusammenarbeit geschrieben hat.</p></div>
+      <div><p class="lead" data-en="What Sportstech wrote about my work and our collaboration when I left. Translated from German.">Was Sportstech zum Abschluss über meine Arbeit und die Zusammenarbeit geschrieben hat.</p></div>
     </div>
     <div class="proofs">
       <article class="proof blue s3d">
         <svg class="wm" viewBox="0 0 1200 1200" aria-hidden="true"><g fill="#fff" fill-rule="evenodd" opacity=".55"><path d="M600 0a600 600 0 1 0 0 1200A600 600 0 0 0 600 0Zm0 120a480 480 0 1 1 0 960 480 480 0 0 1 0-960Z"/><path d="M600 240a360 360 0 1 0 0 720 360 360 0 0 0 0-720Zm0 120a240 240 0 1 1 0 480 240 240 0 0 1 0-480Z"/><circle cx="600" cy="600" r="120"/></g></svg>
-        <q>„Alle seine Aufgaben erfüllte Herr Miskovic stets zu unserer vollsten Zufriedenheit und entsprach unseren Erwartungen in allerbester Weise und jeder Hinsicht.“</q>
-        <div class="who"><svg><use href="#mark"/></svg><div><b>Vice President Product</b><small>Sportstech Brands Holding GmbH · Arbeitszeugnis 2026</small></div></div>
+        <q data-en="“Mr. Miskovic always performed all of his duties to our complete satisfaction and met our expectations in the very best way and in every respect.”">„Alle seine Aufgaben erfüllte Herr Miskovic stets zu unserer vollsten Zufriedenheit und entsprach unseren Erwartungen in allerbester Weise und jeder Hinsicht.“</q>
+        <div class="who"><svg><use href="#mark"/></svg><div><b>Vice President Product</b><small data-en="Sportstech Brands Holding GmbH · Employer reference 2026">Sportstech Brands Holding GmbH · Arbeitszeugnis 2026</small></div></div>
       </article>
       <article class="proof lime s3d">
-        <q>„Er war äußerst teamorientiert und trug in jeder Hinsicht zu einer sehr guten Zusammenarbeit bei.“</q>
-        <div class="who"><svg><use href="#mark"/></svg><div><b>Sportstech</b><small>Arbeitszeugnis 2026</small></div></div>
+        <q data-en="“He was extremely team-oriented and contributed in every respect to a very good working relationship.”">„Er war äußerst teamorientiert und trug in jeder Hinsicht zu einer sehr guten Zusammenarbeit bei.“</q>
+        <div class="who"><svg><use href="#mark"/></svg><div><b>Sportstech</b><small data-en="Employer reference 2026">Arbeitszeugnis 2026</small></div></div>
       </article>
     </div>
     <div class="proofline s3d">
-      <p>Über <b>sechs Jahre</b> bei Sportstech, davon <b>drei Jahre</b> als Product Manager für <b>16 Produkte</b>.</p>
+      <p data-en="More than &lt;b&gt;six years&lt;/b&gt; at Sportstech, including &lt;b&gt;three years&lt;/b&gt; as product manager for &lt;b&gt;16 products&lt;/b&gt;.">Über <b>sechs Jahre</b> bei Sportstech, davon <b>drei Jahre</b> als Product Manager für <b>16 Produkte</b>.</p>
     </div>
   </div>
 </section>
@@ -466,15 +496,15 @@
   <div class="wide">
     <div class="pair s3d">
       <div>
-        <div class="eyebrow">Nebenbei</div>
-        <h2 class="h2">Ich baue auch selbst.</h2>
+        <div class="eyebrow" data-en="On the side">Nebenbei</div>
+        <h2 class="h2" data-en="I build things, too.">Ich baue auch selbst.</h2>
       </div>
-      <div><p class="lead">Eigene Apps und Games, entwickelt mit KI. So verstehe ich, wie Produkte von der anderen Seite entstehen.</p></div>
+      <div><p class="lead" data-en="My own apps and games, built with AI. It shows me how products come together from the other side.">Eigene Apps und Games, entwickelt mit KI. So verstehe ich, wie Produkte von der anderen Seite entstehen.</p></div>
     </div>
     <div class="projects">
-      <article class="proj s3d"><div class="k">App · Prototyp</div><h3>Blackjack Trainer</h3><p>Mobile App für iOS und Android, mit der man Basic Strategy trainiert, inklusive XP, Streaks und Achievements.</p><div class="tags"><span>Flutter</span><span>iOS / Android</span><span>Gamification</span></div></article>
-      <article class="proj s3d"><div class="k">Content</div><h3>Faceless Shorts</h3><p>Animierte Erklär-Shorts für YouTube und TikTok mit KI-Workflow.</p></article>
-      <article class="proj s3d"><div class="k">Game · in Arbeit</div><h3>Roblox Game</h3><p>Ein eigenes Casual-Game für Roblox, von der Idee bis zum Release.</p></article>
+      <article class="proj s3d"><div class="k" data-en="App · Prototype">App · Prototyp</div><h3>Blackjack Trainer</h3><p data-en="Mobile app for iOS and Android for practising basic strategy, with XP, streaks and achievements.">Mobile App für iOS und Android, mit der man Basic Strategy trainiert, inklusive XP, Streaks und Achievements.</p><div class="tags"><span>Flutter</span><span>iOS / Android</span><span>Gamification</span></div></article>
+      <article class="proj s3d"><div class="k">Content</div><h3>Faceless Shorts</h3><p data-en="Animated explainer shorts for YouTube and TikTok, made with an AI workflow.">Animierte Erklär-Shorts für YouTube und TikTok mit KI-Workflow.</p></article>
+      <article class="proj s3d"><div class="k" data-en="Game · in progress">Game · in Arbeit</div><h3>Roblox Game</h3><p data-en="My own casual game for Roblox, from idea to release.">Ein eigenes Casual-Game für Roblox, von der Idee bis zum Release.</p></article>
     </div>
   </div>
 </section>
@@ -483,22 +513,22 @@
   <div class="wide">
     <div class="in s3d">
       <div class="eyebrow">Skills</div>
-      <h2 class="h2">Womit ich arbeite.</h2>
+      <h2 class="h2" data-en="What I work with.">Womit ich arbeite.</h2>
     </div>
     <div class="skills">
-      <div class="s3d"><div class="t15">Product</div><ul><li>Produktentwicklung & Launch</li><li>Prototypen & Muster</li><li>Lieferanten & Produktionspartner</li><li>Sortimentsplanung</li><li>Markt- & Trendanalysen</li><li>Preisgestaltung</li><li>Budget- & Timing-Kontrolle</li></ul></div>
-      <div class="s3d"><div class="t15">Business & Tech</div><ul><li>E-Commerce & Marktplätze</li><li>Roadmaps & Priorisierung</li><li>Flutter / Dart</li><li>Prototyping mit KI</li><li>Git, VS Code</li></ul></div>
-      <div class="s3d"><div class="t15">Sprachen</div><ul><li>Deutsch <i>Muttersprache</i></li><li>Englisch <i>verhandlungssicher</i></li><li>Kroatisch <i>Grundkenntnisse</i></li></ul></div>
+      <div class="s3d"><div class="t15">Product</div><ul><li data-en="Product development &amp; launch">Produktentwicklung & Launch</li><li data-en="Prototypes &amp; samples">Prototypen & Muster</li><li data-en="Suppliers &amp; manufacturing partners">Lieferanten & Produktionspartner</li><li data-en="Range planning">Sortimentsplanung</li><li data-en="Market &amp; trend analysis">Markt- & Trendanalysen</li><li data-en="Pricing">Preisgestaltung</li><li data-en="Budget &amp; timeline control">Budget- & Timing-Kontrolle</li></ul></div>
+      <div class="s3d"><div class="t15">Business & Tech</div><ul><li data-en="E-commerce &amp; marketplaces">E-Commerce & Marktplätze</li><li data-en="Roadmaps &amp; prioritisation">Roadmaps & Priorisierung</li><li>Flutter / Dart</li><li data-en="Prototyping with AI">Prototyping mit KI</li><li>Git, VS Code</li></ul></div>
+      <div class="s3d"><div class="t15" data-en="Languages">Sprachen</div><ul><li data-en="German &lt;i&gt;native&lt;/i&gt;">Deutsch <i>Muttersprache</i></li><li data-en="English &lt;i&gt;fluent&lt;/i&gt;">Englisch <i>verhandlungssicher</i></li><li data-en="Croatian &lt;i&gt;basic&lt;/i&gt;">Kroatisch <i>Grundkenntnisse</i></li></ul></div>
     </div>
   </div>
 </section>
 
 <section class="closing" id="kontakt">
   <div class="wide s3d">
-    <h2>Lass uns<br>sprechen.</h2>
-    <p>Ich suche eine neue Rolle als Product Manager in Berlin oder remote.</p>
+    <h2 data-en="Let’s&lt;br&gt;talk.">Lass uns<br>sprechen.</h2>
+    <p data-en="I’m looking for a new product manager role in Berlin or remote.">Ich suche eine neue Rolle als Product Manager in Berlin oder remote.</p>
     <div class="acts">
-      <a class="btn btn-primary" href="mailto:josipmiskovic51@gmail.com">E-Mail schreiben</a>
+      <a class="btn btn-primary" href="mailto:josipmiskovic51@gmail.com" data-en="Send an email">E-Mail schreiben</a>
       <a class="btn btn-secondary" href="mailto:josipmiskovic51@gmail.com">josipmiskovic51@gmail.com</a>
     </div>
   </div>
@@ -508,18 +538,18 @@
   <div class="wide">
     <div class="fgrid">
       <div class="sym"><svg><use href="#mark"/></svg></div>
-      <div><h4>Seite</h4><ul><li><a href="#ueber-mich">Über mich</a></li><li><a href="#lineup">Lineup</a></li><li><a href="#lieferanten">Lieferanten</a></li><li><a href="#werdegang">Werdegang</a></li><li><a href="#projekte">Projekte</a></li></ul></div>
-      <div><h4>Lineup</h4><ul><li><button data-jump="row">Rudergeräte</button></li><li><button data-jump="bike">Speedbikes</button></li><li><button data-jump="cross">Crosstrainer</button></li></ul></div>
-      <div><h4>Kontakt</h4><ul><li><a href="mailto:josipmiskovic51@gmail.com">josipmiskovic51@gmail.com</a></li></ul></div>
-      <div class="legal"><span>Copyright © 2026 Josip Miskovic. Berlin.</span><span>Produktbilder: Sportstech</span></div>
+      <div><h4 data-en="Page">Seite</h4><ul><li><a href="#ueber-mich" data-en="About">Über mich</a></li><li><a href="#lineup">Lineup</a></li><li><a href="#lieferanten" data-en="Suppliers">Lieferanten</a></li><li><a href="#werdegang" data-en="Experience">Werdegang</a></li><li><a href="#projekte" data-en="Projects">Projekte</a></li></ul></div>
+      <div><h4>Lineup</h4><ul><li><button data-jump="row" data-en="Rowing machines">Rudergeräte</button></li><li><button data-jump="bike" data-en="Indoor bikes">Speedbikes</button></li><li><button data-jump="cross" data-en="Cross trainers">Crosstrainer</button></li></ul></div>
+      <div><h4 data-en="Contact">Kontakt</h4><ul><li><a href="mailto:josipmiskovic51@gmail.com">josipmiskovic51@gmail.com</a></li></ul></div>
+      <div class="legal"><span>Copyright © 2026 Josip Miskovic. Berlin.</span><span data-en="Product images: Sportstech">Produktbilder: Sportstech</span></div>
     </div>
   </div>
 </footer>
 
 <div class="scrim" id="scrim"></div>
-<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="Produktdetails">
+<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="Produktdetails" data-en-aria-label="Product details">
   <div class="grab"><i></i></div>
-  <button class="close" id="close" aria-label="Schließen"><svg viewBox="0 0 12 12"><path stroke="currentColor" stroke-width="1.4" d="m2 2 8 8M10 2l-8 8"/></svg></button>
+  <button class="close" id="close" aria-label="Schließen" data-en-aria-label="Close"><svg viewBox="0 0 12 12"><path stroke="currentColor" stroke-width="1.4" d="m2 2 8 8M10 2l-8 8"/></svg></button>
   <div class="content" id="sheetContent"></div>
 </div>
 
@@ -552,6 +582,26 @@ const STEPS=[
  {n:'Prüfung',p:'Zusammenarbeit mit externen Prüfinstituten, damit jedes Gerät geprüft in den Markt geht.',w:['Prüfinstitute'],img:'sBike'},
  {n:'Markteinführung & danach',p:'Launch mit dem Design- und Marketingteam. Danach Preise anpassen und Produkte weiter verbessern, für zufriedene Kunden.',w:['Marketing','Preise','Kundenzufriedenheit'],img:'sAir'}
 ];
+const FE={"Aqua Elite": ["Real water resistance", "Wood & aluminium frame", "21.5\" touchscreen, rotates 330°", "Foldable"], "sRow": ["Magnetic resistance, 24 levels", "21.5\" rotating touchscreen", "Heart-rate LED feedback", "Foldable"], "WRX1000": ["3-in-1 water resistance", "Solid wood & steel", "LED lighting", "Foldable with wheels"], "sAir": ["Dynamic air resistance", "5.4\" performance monitor", "Multicolour LEDs", "Bluetooth 5.4"], "sRow Lite": ["Magnetic resistance, 24 levels", "LED feedback", "Tablet holder, rotates 330°", "Folds upright"], "WRX500": ["Water resistance up to 12 l", "Solid wood & steel", "LED knob display", "Stores upright"], "PROwer": ["Magnetic resistance, 32 levels", "Double aluminium rail", "LED knob display", "Stores upright"], "PROwer Lite": ["Magnetic resistance, 16 levels", "No outlet needed, battery console", "Tablet holder", "Stores upright"], "sBike": ["21.5\" touchscreen, rotates 360°", "16.5 kg flywheel", "Quiet magnetic brake", "Clipless pedals"], "sBike Lite": ["16.5 kg flywheel", "Rotating tablet holder", "Heart-rate LED feedback", "Clipless pedals"], "SX200": ["22 kg flywheel", "Infinitely variable resistance", "Belt drive", "Hand-grip pulse sensors"], "SX175": ["Infinitely variable magnetic brake", "Whisper-quiet belt drive", "4 kg flywheel", "Tablet holder"], "sCross": ["32 resistance & 3 incline levels", "48 cm stride length", "Generates its own power", "Only 0.91 m² footprint"], "CX700": ["24 kg flywheel mass", "24 resistance levels", "12 programmes", "LED feedback"], "CX625": ["32 resistance levels", "LED knob display", "App control", "Pulse sensor"], "CX608": ["8 magnetic resistance levels", "Hand-grip pulse measurement", "Belt drive", "Transport wheels"]};
+P.forEach(p=>p.fe=FE[p.n]);
+const STEPS_EN=[
+ {n:'Market & idea',p:'Ongoing market monitoring, market and trend analysis. This leads to business models and marketing concepts for new products.',w:['Market analysis','Concept']},
+ {n:'Design',p:'Together with in-house and external product designers, the idea becomes a machine that feels good during a workout.',w:['Product designers','Design team']},
+ {n:'Prototypes & samples',p:'Building, testing and evaluating prototypes and samples until the product is ready for production.',w:['Prototypes','Samples']},
+ {n:'Suppliers & manufacturing',p:'Close coordination with suppliers and manufacturing partners up to the start of production, owning budget and timing.',w:['Suppliers','Manufacturing partners','Budget & timing']},
+ {n:'Testing',p:'Working with external testing institutes so every product is tested before it goes to market.',w:['Testing institutes']},
+ {n:'Launch & beyond',p:'Launch with the design and marketing team. Afterwards, adjusting prices and improving products further for happy customers.',w:['Marketing','Pricing','Customer satisfaction']}
+];
+const TXT={
+ de:{cat:{row:'Rudergerät',bike:'Speedbike',cross:'Crosstrainer'},tier:{Premium:'Premium',Mittelklasse:'Mittelklasse',Einstieg:'Einstieg'},view:'Ansehen',step:(i,n)=>`Schritt ${i} von ${n}`,
+   title:'Josip Miskovic – Product Manager',desc:document.querySelector('meta[name=description]').content},
+ en:{cat:{row:'Rowing machine',bike:'Indoor bike',cross:'Cross trainer'},tier:{Premium:'Premium',Mittelklasse:'Mid-range',Einstieg:'Entry-level'},view:'View',step:(i,n)=>`Step ${i} of ${n}`,
+   title:'Josip Miskovic – Product Manager · Sport & Fitness',desc:'Josip Miskovic – product manager for sports and fitness equipment in Berlin. Owned every rowing machine, indoor bike and cross trainer at Sportstech, from idea through suppliers and manufacturing to market launch.'}
+};
+let LANG='de';
+const T=()=>TXT[LANG];
+const feat=p=>LANG==='en'?p.fe:p.f;
+const step=i=>LANG==='en'?{...STEPS[i],...STEPS_EN[i]}:STEPS[i];
 const img=(p,w)=>`${CDN}${p.i}&width=${w}`;
 const pic=(p,w,eager)=>`<img src="${img(p,w)}" alt="Sportstech ${p.n}" ${eager?'':'loading="lazy"'} draggable="false" onerror="this.style.visibility='hidden'">`;
 const byName=n=>P.find(p=>p.n===n);
@@ -563,7 +613,7 @@ const check='<svg><use href="#check"/></svg>';
 /* ---------- Hero: 3D-Produktring ---------- */
 const ring=document.getElementById('ring');
 const rcards=P.map((p,i)=>{const d=document.createElement('div');d.className='rcard';
-  d.innerHTML=`<div class="plate">${pic(p,400,i<6)}</div><b>${p.n}<span>${p.t}</span></b>`;ring.appendChild(d);return d});
+  d.innerHTML=`<div class="plate">${pic(p,400,i<6)}</div><b>${p.n}<span class="rt"></span></b>`;ring.appendChild(d);return d});
 const hero=document.getElementById('hero'),hcopy=document.getElementById('hcopy'),hcopy2=document.getElementById('hcopy2'),hint=document.getElementById('hint'),floor=document.getElementById('floor');
 function heroFrame(){
   const r=hero.getBoundingClientRect(),total=hero.offsetHeight-innerHeight;
@@ -585,7 +635,7 @@ function heroFrame(){
 /* ---------- Lineup ---------- */
 const track=document.getElementById('track');
 P.forEach((p,i)=>{const d=document.createElement('article');d.className='pcard';d.dataset.c=p.c;d.tabIndex=0;
-  d.innerHTML=`<div class="plate">${pic(p,640)}</div><div class="tier">${p.t}</div><h3>${p.n}</h3><div class="cat">${CAT[p.c]}</div><ul>${p.f.slice(0,3).map(x=>`<li>${x}</li>`).join('')}</ul><div class="go"><span>Ansehen</span><svg><use href="#plus"/></svg></div>`;
+  d.innerHTML=`<div class="plate">${pic(p,640)}</div><div class="tier"></div><h3>${p.n}</h3><div class="cat"></div><ul></ul><div class="go"><span class="view"></span><svg><use href="#plus"/></svg></div>`;
   let sx=0,sy0=0;d.addEventListener('pointerdown',e=>{sx=e.clientX;sy0=e.clientY});
   d.addEventListener('click',e=>{if(Math.hypot(e.clientX-sx,e.clientY-sy0)<10)openSheet(i)});
   d.addEventListener('keydown',e=>{if(e.key==='Enter')openSheet(i)});
@@ -645,16 +695,16 @@ addEventListener('load',initThumb);if(document.fonts)document.fonts.ready.then(i
 /* ---------- Lieferanten: 3D-Kartenstapel ---------- */
 const deck=document.getElementById('deck'),stepsEl=document.getElementById('steps'),proc=document.getElementById('lieferanten');
 const scards=STEPS.map((s,i)=>{const d=document.createElement('article');d.className='scard';
-  d.innerHTML=`<div class="txt"><div class="num">Schritt ${i+1} von ${STEPS.length}</div><h3>${s.n}</h3><p>${s.p}</p><div class="who">${s.w.map(x=>`<span>${x}</span>`).join('')}</div></div><div class="plate">${pic(byName(s.img),600)}</div>`;
+  d.innerHTML=`<div class="txt"><div class="num"></div><h3></h3><p></p><div class="who"></div></div><div class="plate">${pic(byName(s.img),600)}</div>`;
   deck.appendChild(d);
-  const li=document.createElement('li');li.innerHTML=`<span>${String(i+1).padStart(2,'0')}</span>${s.n}`;stepsEl.appendChild(li);return d});
+  const li=document.createElement('li');stepsEl.appendChild(li);return d});
 const lis=[...stepsEl.children];
 function processFrame(){
   const r=proc.getBoundingClientRect(),total=proc.offsetHeight-innerHeight;
   const p=clamp(-r.top/total),s=reduce?Math.round(p*(STEPS.length-1)):clamp(p*1.14-.08)*(STEPS.length-1);
   scards.forEach((c,i)=>{const d=i-s;let t='',o=1;
-    if(d<0&&i<STEPS.length-1){const k=clamp(-d);t=`translate3d(0,${-k*70}%,${k*120}px) rotateX(${k*55}deg)`;o=1-clamp((k-.35)/.5);}
-    else{const k=Math.max(0,d);t=`translate3d(0,${k*26}px,${-k*90}px)`;o=clamp(1-k*.3);}
+    if(d<0&&i<STEPS.length-1){const k=clamp(-d);t=`translate3d(0,${-k*90}px,${-k*180}px) rotateX(${k*18}deg)`;o=clamp(1-(k-.12)/.26);}
+    else{const k=Math.max(0,d);t=`translate3d(0,${k*26}px,${-k*90}px)`;o=k<1?1:clamp(1-(k-1)*.35);}
     c.style.transform=t;c.style.opacity=o.toFixed(3);c.style.zIndex=100-i;c.style.visibility=o<=.01?'hidden':'visible'});
   const cur=Math.min(STEPS.length-1,Math.round(s));
   lis.forEach((l,i)=>{l.classList.toggle('on',i===cur);l.classList.toggle('done',i<cur)});
@@ -680,6 +730,32 @@ function frame(){ticking=false;heroFrame();processFrame();if(!reduce)sectionsFra
   progress.style.transform=`scaleX(${clamp(scrollY/(document.documentElement.scrollHeight-innerHeight))})`}
 addEventListener('scroll',()=>{if(!ticking){ticking=true;requestAnimationFrame(frame)}},{passive:true});
 addEventListener('resize',()=>{frame();initThumb()});
+
+/* ---------- Sprache / Language ---------- */
+const langLinks=[...document.querySelectorAll('.lang a')];
+function setLang(l,push){
+  LANG=l==='en'?'en':'de';const en=LANG==='en';
+  document.documentElement.lang=LANG;
+  document.querySelectorAll('[data-en]').forEach(el=>{if(el.dataset.de===undefined)el.dataset.de=el.innerHTML;el.innerHTML=en?el.dataset.en:el.dataset.de});
+  ['alt','aria-label'].forEach(a=>{const k='en'+a.replace(/(^|-)(\w)/g,(m,x,c)=>c.toUpperCase());
+    document.querySelectorAll(`[data-en-${a}]`).forEach(el=>{const dk='de'+k.slice(2);if(el.dataset[dk]===undefined)el.dataset[dk]=el.getAttribute(a);el.setAttribute(a,en?el.dataset[k]:el.dataset[dk])})});
+  document.title=T().title;document.querySelector('meta[name=description]').content=T().desc;
+  rcards.forEach((c,i)=>c.querySelector('.rt').textContent=T().tier[P[i].t]);
+  pcards.forEach((c,i)=>{const p=P[i];c.querySelector('.tier').textContent=T().tier[p.t];c.querySelector('.cat').textContent=T().cat[p.c];
+    c.querySelector('ul').innerHTML=feat(p).slice(0,3).map(x=>`<li>${x}</li>`).join('');c.querySelector('.view').textContent=T().view;
+    c.querySelector('img').alt='Sportstech '+p.n});
+  scards.forEach((c,i)=>{const s=step(i);c.querySelector('.num').textContent=T().step(i+1,STEPS.length);c.querySelector('h3').textContent=s.n;
+    c.querySelector('p').textContent=s.p;c.querySelector('.who').innerHTML=s.w.map(x=>`<span>${x}</span>`).join('')});
+  lis.forEach((li,i)=>li.innerHTML=`<span>${String(i+1).padStart(2,'0')}</span>${step(i).n}`);
+  langLinks.forEach(a=>{const on=a.dataset.lang===LANG;a.classList.toggle('on',on);a.setAttribute('aria-current',on?'true':'false')});
+  try{localStorage.setItem('lang',LANG)}catch(e){}
+  if(push){const u=new URL(location.href);if(en)u.searchParams.set('lang','en');else u.searchParams.delete('lang');history.replaceState(null,'',u)}
+  initThumb();frame();
+}
+langLinks.forEach(a=>a.addEventListener('click',e=>{e.preventDefault();setLang(a.dataset.lang,true)}));
+(()=>{let l=new URLSearchParams(location.search).get('lang');
+  if(!l){try{l=localStorage.getItem('lang')}catch(e){}}
+  setLang(l||'de',false)})();
 frame();
 
 /* ---------- Produkt-Sheet ---------- */
@@ -688,7 +764,7 @@ const sy=Spring(1.05,{damping:1,response:.4});
 sy.onUpdate=v=>{sheet.style.visibility=v>=1.04?'hidden':'visible';sheet.style.transform=`translate(-50%,${v*100}%)`;scrim.style.opacity=clamp(1-v)};
 let open=false;
 function openSheet(i){const p=P[i];
-  sc.innerHTML=`<div class="plate">${pic(p,1400,true)}</div><div class="k">${CAT[p.c]} · ${p.t}</div><h3>${p.n}</h3><div class="specs">${p.f.map(x=>`<div>${check}${x}</div>`).join('')}</div>`;
+  sc.innerHTML=`<div class="plate">${pic(p,1400,true)}</div><div class="k">${T().cat[p.c]} · ${T().tier[p.t]}</div><h3>${p.n}</h3><div class="specs">${feat(p).map(x=>`<div>${check}${x}</div>`).join('')}</div>`;
   scrim.classList.add('on');open=true;sy.damping=1;sy.to(0);document.body.style.overflow='hidden'}
 function closeSheet(v){open=false;sy.damping=1;sy.to(1.05,v);scrim.classList.remove('on');document.body.style.overflow=''}
 scrim.addEventListener('click',()=>closeSheet());
